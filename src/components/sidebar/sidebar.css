@@ -1,0 +1,85 @@
+
+.sidebar_58f7bdc3 {
+	display: flex;
+	flex-direction: column;
+	gap: 15px
+}
+
+.sidebar_photo_58f7bdc3 {
+	width: 330px;
+	height: 357px;
+	border-radius: 55px;
+	margin-bottom: 12px;
+}
+
+.sidebar_author_58f7bdc3 {
+	font-weight: 600;
+	font-size: 25px;
+	color: #3B4173;
+	line-height: 29px;
+}
+
+.sidebar_info_58f7bdc3 {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	list-style: none;
+}
+
+.sidebar_info_block_58f7bdc3 {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.sidebar_info_text_58f7bdc3 {
+	color: #3B4173;
+	font-size: 15px;
+	line-height: 135%;
+	font-weight: 600;
+}
+
+.sidebar_info_stars_text_58f7bdc3 {
+	font-size: 20px;
+}
+
+.sidebar_stars_58f7bdc3 {
+	display: flex;
+	gap: 5px;
+}
+
+.sidebar_star_58f7bdc3 {
+	width: 18px;
+	height: 18px;
+}
+
+.sidebar_button_58f7bdc3 {
+	width: 100%;
+	height: 50px;
+	border-radius: 15px;
+	border: 2px solid #C1492E;
+	font-size: 15px;
+	line-height: 135%;
+	font-weight: 600;
+	transition: all .2s ease-in-out;
+}
+
+.sidebar_button_fill_58f7bdc3 {
+	background-color: #C1492E;
+	color: white;
+}
+
+.sidebar_button_fill_58f7bdc3:hover {
+	background-color: #DF3E1A;
+	border-color: #DF3E1A;
+}
+
+.sidebar_button_border_58f7bdc3 {
+	color: #C1492E;
+	background-color: white;
+}
+
+.sidebar_button_border_58f7bdc3:hover {
+	background-color: #C1492E;
+	color: white;
+}
