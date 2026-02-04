@@ -18,10 +18,19 @@ button {
     width: 100%;
     max-width: 1276px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1280px) {
+        max-width: 800px;
+    }
 }
 
 .content_container_58f7bdc3 {
     display: grid;
     gap: 50px;
     grid-template-columns: 330px 900px;
+    
+    @media screen and (max-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+    }
 }

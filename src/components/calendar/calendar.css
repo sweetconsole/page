@@ -1,0 +1,113 @@
+
+.calendar_58f7bdc3 {
+	width: 420px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	padding: 24px;
+	background: #F4F4F4;
+	box-shadow: 0 1px 2px 0 rgba(0, 14, 51,0.25);
+	border-radius: 46px;
+
+	display: none;
+}
+
+.calendar_header_58f7bdc3 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.calendar_button_prev_month_58f7bdc3,
+.calendar_button_next_month_58f7bdc3 {
+	width: 44px;
+	height: 44px;
+	background: white;
+	border-radius: 50%;
+	border: 2px solid #C1492E;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar_selects {
+	display: flex;
+	gap: 2px;
+}
+
+.calendar_select_58f7bdc3 {
+	background: white;
+	padding: 10px 22px 10px 12px;
+	position: relative;
+	border-radius: 7px;
+}
+
+.calendar_select_text_58f7bdc3 {
+	font-size: 24px;
+	line-height: 100%;
+	color: #3b4173;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+}
+
+.calendar_select_triangle_58f7bdc3 {
+	position: absolute;
+	bottom: 13px;
+	right: 12px;
+}
+
+/* WEEK DAYS */
+.calendar_weekdays_58f7bdc3 {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 44px;
+	margin-bottom: 12px;
+}
+
+.calendar_weekday_58f7bdc3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: #3B4173;
+}
+
+/* MOUTH DAYS */
+.calendar_month_days_58f7bdc3 {
+
+}
+
+
+.calendar_day_58f7bdc3 {
+	height: 44px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: #3B4173;
+	border-radius: 7px;
+	background-color: white;
+	border: 2px solid white;
+	box-shadow: 0 1px 1px 0 rgba(0, 14, 51, 0.05);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.calendar_day_58f7bdc3:hover {
+	border-color: #C1492E;
+}
+
+.calendar_day_accent_58f7bdc3 {
+	background-color: #C1492E;
+	border: 2px solid #C1492E;
+	color: white;
+}
+
+.calendar_day_other_58f7bdc3 {
+	opacity: 0.4;
+	background: transparent;
+	box-shadow: none;
+}
