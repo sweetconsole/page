@@ -140,3 +140,38 @@
 	height: 133px;
 	border-radius: 20px;
 }
+
+/* MOVIES */
+.info_list_movies_58f7bdc3 {
+	margin-bottom: 75px;
+	cursor: grab;
+}
+
+.info_list_movies_58f7bdc3:active {
+	cursor: grabbing;
+}
+
+.info_movie_58f7bdc3 {
+	width: 100%;
+}
+
+.info_movie_cover_58f7bdc3 {
+	width: 100%;
+	height: 230px;
+	border-radius: 13px;
+	margin-bottom: 15px;
+}
+
+.info_movie_title_58f7bdc3 {
+	font-size: 20px;
+	line-height: 135%;
+	color: #3B4173;
+	font-weight: 600;
+	margin-bottom: 13px;
+}
+
+.info_movie_description_58f7bdc3 {
+	font-size: 15px;
+	line-height: 135%;
+	color: #3B4173;
+}

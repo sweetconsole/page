@@ -1,5 +1,4 @@
 const characters = new Swiper('.info_list_characters_58f7bdc3', {
-	direction: 'horizontal',
 	loop: true,
 	spaceBetween: 15,
 	slidesPerView: 9,
@@ -25,4 +24,10 @@ const photo_list = new Swiper('.info_list_photo_58f7bdc3', {
 		nextEl: '.info_swiper_button_next_photo_58f7bdc3',
 		prevEl: '.info_swiper_button_prev_photo_58f7bdc3',
 	},
+});
+
+const movies_list = new Swiper('.info_list_movies_58f7bdc3', {
+	slidesPerView: 5,
+	spaceBetween: 20,
+	loop: true
 });
