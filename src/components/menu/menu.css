@@ -1,0 +1,52 @@
+
+.menu_58f7bdc3 {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: #C1492E;
+	display: none;
+	pointer-events: none;
+}
+
+.menu_active_58f7bdc3 {
+	display: block;
+	pointer-events: auto;
+}
+
+.menu_container_58f7bdc3 {
+	height: 100%;
+	padding: 120px 15px 40px;
+	position: relative;
+}
+
+.menu_navigation_58f7bdc3 {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-bottom: 25px;
+}
+
+.menu_navigation_link_58f7bdc3 {
+	color: white;
+	font-size: 25px;
+	line-height: 135%;
+	font-weight: 500;
+}
+
+.menu_button_58f7bdc3 {
+	width: 100%;
+	max-width: 290px;
+	height: 50px;
+	border-radius: 15px;
+	font-weight: 600;
+	color: #C1492E;
+	border: none;
+	background-color: white;
+	font-size: 18px;
+	line-height: 135%;
+	position: absolute;
+	bottom: 40px;
+}

@@ -13,10 +13,75 @@
 
     <title>Страница</title>
 </head>
-<body>
+<body id="body">
+
+    <div class="background_58f7bdc3" id="background_58f7bdc3" onclick="closeForm()"></div>
 
     
-<header class="header_58f7bdc3" id="header">
+<div class="menu_58f7bdc3" id="menu_58f7bdc3">
+	<div class="container_58f7bdc3 menu_container_58f7bdc3">
+		<nav class="menu_navigation_58f7bdc3">
+			<a class="menu_navigation_link_58f7bdc3" href="#">Услуги</a>
+			<a class="menu_navigation_link_58f7bdc3" href="#">Дикторы</a>
+			<a class="menu_navigation_link_58f7bdc3" href="#">Школа вокала</a>
+			<a class="menu_navigation_link_58f7bdc3" href="#">Рейтинги</a>
+			<a class="menu_navigation_link_58f7bdc3" href="#">Инфопортал</a>
+		</nav>
+
+		<button class="menu_button_58f7bdc3" onclick="openForm()">Быстрый заказ</button>
+	</div>
+</div>
+    
+<div class="form_58f7bdc3" id="form_58f7bdc3">
+	<input class="form_input_58f7bdc3" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
+	<input class="form_input_58f7bdc3 form_input_date_58f7bdc3" type="text" placeholder="Событие" aria-label="Событие" readonly>
+
+	<div class="form_input_date_58f7bdc3">
+		<input class="form_input_58f7bdc3" id="dateInput" placeholder="День события" type="text" readonly>
+
+		<div class="calendar" id="calendar">
+	<div class="calendar-header">
+		<button class="nav-btn prev-month" title="Предыдущий месяц">
+			<img src="./image/arrow_left.svg" alt="<">
+		</button>
+
+		<div class="month-year-selector">
+			<select class="month-select" id="monthSelect"></select>
+			<select class="year-select" id="yearSelect"></select>
+		</div>
+
+		<button class="nav-btn next-month" title="Следующий месяц">
+			<img src="./image/arrow_right.svg" alt=">">
+		</button>
+	</div>
+
+	<div class="weekdays">
+		<div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
+		<div>Пт</div><div>Сб</div><div>Вс</div>
+	</div>
+
+	<div class="days" id="calendarDays"></div>
+</div>
+	</div>
+
+	<input class="form_input_58f7bdc3" type="tel" placeholder="+7 (000) 000-00-00" aria-label="Ваш номер телефона" required>
+
+	<button class="form_button_58f7bdc3" type="submit" onclick="submitForm()" >Отправить</button>
+
+	<div class="form_agreement_58f7bdc3">
+		<input class="form_agreement_checkbox_58f7bdc3" type="checkbox" aria-label="" required>
+
+		<div class="form_agreement_text_58f7bdc3">
+			Я согласен с условиями
+			<a class="form_agreement_link_58f7bdc3" href="#">обработки персональных данных</a>
+			и
+			<a class="form_agreement_link_58f7bdc3" href="#">политикой конфиденциальности</a>
+		</div>
+	</div>
+</div>
+
+    
+<header class="header_58f7bdc3" id="header_58f7bdc3">
 	<div class="container_58f7bdc3 header_container_58f7bdc3">
     <div class="header_top_58f7bdc3">
 			<nav class="header_top_navigation_58f7bdc3">
@@ -67,13 +132,19 @@
 			</nav>
 
 			<div class="header_bottom_buttons_58f7bdc3">
-				<button class="header_bottom_buttons_button_58f7bdc3">Быстрый заказ</button>
+				<button class="header_bottom_buttons_button_58f7bdc3" onclick="openForm()">Быстрый заказ</button>
 
 				<div class="header_bottom_button_58f7bdc3">
 					<a class="header_bottom_button_phone_58f7bdc3" href="#">8 800 200-45-51</a>
 					<button class="header_bottom_buttons_bell_58f7bdc3">Заказать звонок</button>
 				</div>
 			</div>
+
+			<button class="header_button_menu_58f7bdc3" id="header_button_menu_58f7bdc3" onclick="toggleMenu()">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
 		</div>
 	</div>
 </header>
@@ -154,82 +225,31 @@
 			</li>
 		</ul>
 
-		<button class="sidebar_button_58f7bdc3 sidebar_button_fill_58f7bdc3">Связаться</button>
-		<button class="sidebar_button_58f7bdc3 sidebar_button_border_58f7bdc3">Проверить дату</button>
+		<button class="sidebar_button_58f7bdc3 sidebar_button_fill_58f7bdc3" onclick="openForm()">Связаться</button>
+		<button class="sidebar_button_58f7bdc3 sidebar_button_border_58f7bdc3" id="openCalendar">Проверить дату</button>
 
-		
-<div class="calendar_58f7bdc3">
-	<div class="calendar_header_58f7bdc3">
-		<button class="calendar_button_prev_month_58f7bdc3">
-			<img src="./image/arrow_left.svg" alt=">" >
-		</button>
+		<div class="calendar" id="sidebarCalendar">
+  <div class="calendar-header">
+    <button class="nav-btn prev-sidebar_month" title="Предыдущий месяц">
+      <img src="./image/arrow_left.svg" alt="<">
+    </button>
 
-		<div class="calendar_selects">
-			<div class="calendar_select_58f7bdc3">
-				<p class="calendar_select_text_58f7bdc3">Сентябрь</p>
-				<img class="calendar_select_triangle_58f7bdc3" src="./image/triangle.svg" alt="">
-			</div>
+    <div class="month-year-selector">
+      <select class="month-select" id="sidebarCalendarMonthSelect"></select>
+      <select class="year-select" id="sidebarCalendarYearSelect"></select>
+    </div>
 
-			<div class="calendar_select_58f7bdc3">
-				<p class="calendar_select_text_58f7bdc3">2025</p>
-				<img class="calendar_select_triangle_58f7bdc3" src="./image/triangle.svg" alt="">
-			</div>
-		</div>
+    <button class="nav-btn next-sidebar_month" title="Следующий месяц">
+      <img src="./image/arrow_right.svg" alt=">">
+    </button>
+  </div>
 
-		<button class="calendar_button_next_month_58f7bdc3">
-			<img src="./image/arrow_right.svg" alt=">" >
-		</button>
-	</div>
+  <div class="weekdays">
+    <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
+    <div>Пт</div><div>Сб</div><div>Вс</div>
+  </div>
 
-	<ul class="calendar_weekdays_58f7bdc3">
-		<li class="calendar_weekday_58f7bdc3">Пн</li>
-		<li class="calendar_weekday_58f7bdc3">Вт</li>
-		<li class="calendar_weekday_58f7bdc3">Ср</li>
-		<li class="calendar_weekday_58f7bdc3">Чт</li>
-		<li class="calendar_weekday_58f7bdc3">Пт</li>
-		<li class="calendar_weekday_58f7bdc3">Сб</li>
-		<li class="calendar_weekday_58f7bdc3">Вс</li>
-	</ul>
-
-	<div class="swiper calendar_month_days_58f7bdc3">
-		<ul class="swiper-wrapper">
-			<li class="swiper-slide calendar_day_58f7bdc3">1</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">2</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">3</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">4</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">5</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">6</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">7</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">8</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">9</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">10</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_accent_58f7bdc3">11</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_accent_58f7bdc3">12</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">13</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">14</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">15</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">16</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">17</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">18</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">19</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">20</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_accent_58f7bdc3">21</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">22</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">23</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">24</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">25</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">26</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">27</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">28</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">29</li>
-			<li class="swiper-slide calendar_day_58f7bdc3">30</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_other_58f7bdc3">1</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_other_58f7bdc3">2</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_other_58f7bdc3">3</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_other_58f7bdc3">4</li>
-			<li class="swiper-slide calendar_day_58f7bdc3 calendar_day_other_58f7bdc3">5</li>
-		</ul>
-	</div>
+  <div class="days" id="sidebarCalendarDays"></div>
 </div>
 	</div>
 </div>

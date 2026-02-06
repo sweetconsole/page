@@ -7,6 +7,7 @@
 body {
     color: black;
     font-weight: 400;
+    position: relative;
 }
 
 a,
@@ -22,6 +23,10 @@ button {
     @media screen and (max-width: 1280px) {
         max-width: 800px;
     }
+
+    @media screen and (max-width: 810px) {
+        max-width: 320px;
+    }
 }
 
 .content_container_58f7bdc3 {
@@ -33,4 +38,22 @@ button {
         display: flex;
         flex-direction: column;
     }
+}
+
+.background_58f7bdc3 {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    pointer-events: none;
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+}
+
+.background_58f7bdc3_active {
+    display: block;
+    pointer-events: all;
 }

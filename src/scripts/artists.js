@@ -141,7 +141,7 @@ artists.forEach((artist, key) => {
 
 			<p class="other_artist_description_58f7bdc3">${artist.description}</p>
 
-			<button class="other_artist_button_58f7bdc3">Связаться</button>
+			<button class="other_artist_button_58f7bdc3" onclick="openForm()">Связаться</button>
 		</li>
 	`
 })
