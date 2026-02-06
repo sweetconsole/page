@@ -106,6 +106,15 @@
 	}
 }
 
+.footer_bold_link_58f7bdc3 {
+	text-decoration: underline;
+	text-decoration-color: transparent;
+}
+
+.footer_bold_link_58f7bdc3:hover {
+	text-decoration-color: #3B4173;
+}
+
 .footer_text_58f7bdc3 {
 	font-size: 15px;
 	line-height: 18px;

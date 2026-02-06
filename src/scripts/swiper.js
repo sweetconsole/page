@@ -35,7 +35,7 @@ const video_list = new Swiper('.info_list_video_58f7bdc3', {
 
 const photo_list = new Swiper('.info_list_photo_58f7bdc3', {
 	slidesPerView: 2,
-	spaceBetween: 15,
+	spaceBetween: 3,
 	grid: {
 		rows: 3,
 		fill: "row"
@@ -43,7 +43,7 @@ const photo_list = new Swiper('.info_list_photo_58f7bdc3', {
 	breakpoints: {
 		810: {
 			slidesPerView: 4,
-			spaceBetween: 10,
+			spaceBetween: 3,
 			grid: {
 				rows: 2,
 				fill: "row"
@@ -55,6 +55,13 @@ const photo_list = new Swiper('.info_list_photo_58f7bdc3', {
 		prevEl: '.info_swiper_button_prev_photo_58f7bdc3',
 	},
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	photo_list.update();
+	photo_list.navigation.update();
+
+} )
+
 
 const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
 	slidesPerView: 1,

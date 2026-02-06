@@ -45,7 +45,7 @@
 	align-items: center;
 	justify-content: center;
 	transition: all 0.2s ease-in-out;
-	border: 2px solid #C1492E;
+	border: 1px solid #C1492E;
 
 	@media screen and (max-width: 810px) {
 		width: 22px;
@@ -141,7 +141,7 @@
 	font-size: 18px;
 	font-weight: 600;
 	position: relative;
-	border: 2px solid white;
+	border: 1px solid white;
 	background-color: white;
 	color: #3B4173;
 
@@ -151,7 +151,7 @@
 }
 
 .day:hover {
-	border: 2px solid #C1492E;
+	border: 1px solid #C1492E;
 }
 
 .day.selected {
@@ -167,7 +167,7 @@
 }
 
 .day.today {
-	border: 2px solid #3b4173;
+	border: 1px solid #3b4173;
 }
 
 /*.day.weekend {*/
