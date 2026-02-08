@@ -2337,8 +2337,6 @@ button {
 	background-color: white;
 	display: none;
 	pointer-events: none;
-	display: block;
-	pointer-events: auto;
 	overflow-y: auto;
 }
 
