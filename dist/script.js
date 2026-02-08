@@ -784,12 +784,8 @@ const other_artist = new Swiper(".other_artists_58f7bdc3", {
 	},
 	breakpoints: {
 		810: {
-			slidesPerView: 4,
-			spaceBetween: 20,
-		},
-		1280: {
-			slidesPerView: 6,
-			spaceBetween: 30,
+			slidesPerView: 1,
+			spaceBetween: 0,
 		},
 	}
 })

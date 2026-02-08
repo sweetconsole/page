@@ -1,3 +1,9 @@
+
+:root {
+    --color-accent: #C1492E;
+}
+
+
 * {
     font-family: "Roboto", sans-serif;
 }
