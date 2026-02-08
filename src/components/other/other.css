@@ -55,7 +55,8 @@
 
 /* ARTISTS */
 .other_artists_58f7bdc3 {
-	width: 900px;
+	width: 100%;
+	max-width: 900px;
 }
 
 .other_list_artist_58f7bdc3 {
@@ -87,6 +88,12 @@
 	padding-left: 35px;
 	padding-right: 35px;
 	padding-top: 36px;
+
+	@media screen and (max-width: 810px) {
+		height: auto;
+		padding: 20px 10px 30px;
+		border-radius: 15px;
+	}
 }
 
 .bookmark_58f7bdc3 {
@@ -101,6 +108,10 @@
 	align-items: center;
 	flex-direction: column;
 	gap: 8px;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .artists_58f7bdc3 {
@@ -134,12 +145,46 @@
 	text-transform: uppercase;
 }
 
+.card_header_58f7bdc3 {
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	display: none;
+
+	@media screen and (max-width: 810px) {
+		display: flex;
+	}
+}
+
+.card_header_button_58f7bdc3 {
+	width: 21px;
+	height: 21px;
+	background-color: transparent;
+	border: none;
+}
+
+.card_header_button_icon_58f7bdc3 {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.card_header_time_58f7bdc3 {
+	font-size: 13px;
+	line-height: 15px;
+	color: #3B4173;
+}
+
 .like_58f7bdc3 {
 	position: absolute;
 	top: 40px;
 	right: 35px;
 	border: none;
 	cursor: pointer;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .like_icon_58f7bdc3 {
@@ -152,12 +197,22 @@
 	align-items: center;
 	gap: 25px;
 	margin-bottom: 12px;
+
+	@media screen and (max-width: 810px) {
+		flex-direction: column;
+		gap: 15px;
+	}
 }
 
 .player_58f7bdc3 {
 	width: 184px;
 	height: 184px;
 	position: relative;
+
+	@media screen and (max-width: 810px) {
+		width: 125px;
+		height: 125px;
+	}
 }
 
 .player_button_58f7bdc3 {
@@ -174,27 +229,48 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+
+	@media screen and (max-width: 810px) {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .player_button_play_58f7bdc3 {
 	width: 27px;
 	height: 27px;
 	margin-left: 7px;
+
+	@media screen and (max-width: 810px) {
+		width: 18px;
+		height: 18px;
+		margin-left: 4px;
+	}
 }
 
 .player_button_pause_58f7bdc3 {
 	width: 32px;
 	height: 32px;
+
+	@media screen and (max-width: 810px) {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .photo_58f7bdc3 {
 	width: 170px;
 	height: 170px;
 	position: absolute;
-	top: 8px;
-	left: 8px;
+	top: 4px;
+	left: 4px;
 	z-index: 1;
 	border-radius: 100%;
+
+	@media screen and (max-width: 810px) {
+		width: 117px;
+		height: 117px;
+	}
 }
 
 .player_bar_58f7bdc3 {
@@ -208,10 +284,15 @@
 }
 
 .artist_name_58f7bdc3 {
+	max-width: 110px;
 	display: flex;
 	gap: 12px;
 	align-items: center;
 	margin-bottom: 15px;
+
+	@media screen and (max-width: 810px) {
+		margin-bottom: 0;
+	}
 }
 
 .artist_name_text_58f7bdc3 {
@@ -219,10 +300,24 @@
 	font-size: 25px;
 	line-height: 29px;
 	font-weight: 600;
+
+	@media screen and (max-width: 810px) {
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 400;
+		text-align: center;
+		text-decoration: underline;
+	}
 }
 
 .artist_name_text_58f7bdc3:hover {
 	text-decoration: underline;
+}
+
+.artist_name_icon_58f7bdc3 {
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .statistics_list_58f7bdc3 {
@@ -230,6 +325,10 @@
 	gap: 15px;
 	align-items: center;
 	margin-bottom: 20px;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .statistics_58f7bdc3 {
@@ -263,6 +362,10 @@
 	display: flex;
 	align-items: center;
 	gap: 12px;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .tag_check_58f7bdc3 {
@@ -299,6 +402,10 @@
 .gallery_58f7bdc3 {
 	margin-bottom: 20px;
 	cursor: grab;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .gallery_58f7bdc3:active {
@@ -343,32 +450,56 @@
 	margin-left: 3px;
 }
 
-.footer_58f7bdc3 {
+.card_footer_58f7bdc3 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media screen and (max-width: 810px) {
+		justify-content: center;
+	}
 }
 
-.price_58f7bdc3 {
+.card_price_58f7bdc3 {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-.price_icon_58f7bdc3 {
+.card_price_icon_58f7bdc3 {
 	width: 18px;
 	height: 18px;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
-.price_text_58f7bdc3 {
+.card_price_text_58f7bdc3 {
 	font-size: 22px;
 	line-height: 135%;
 	font-weight: 700;
 	color: var(--color-accent);
+
+	@media screen and (max-width: 810px) {
+		font-size: 14px;
+		line-height: 16px;
+		color: #3b4173;
+		text-align: center;
+		font-weight: 400;
+	}
+}
+
+.card_price_text_bold_58f7bdc3 {
+	@media screen and (max-width: 810px) {
+		font-weight: 600;
+	}
 }
 
 .card_menu_58f7bdc3 {
-
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
 .card_button_58f7bdc3 {

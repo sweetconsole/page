@@ -10,38 +10,20 @@ const artists = [
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
 		price: 10000,
-		description: "Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
 		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5f68d0efd410d.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
-		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
-		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
+			"./image/other.png",
+			"./image/other.png",
+			"./image/other.png",
+		],
+		gallery: [
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
 		]
 	},
 	{
@@ -51,11 +33,21 @@ const artists = [
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
+		price: 10000,
 		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
+			"./image/other.png",
+			"./image/other.png",
+			"./image/other.png",
+		],
+		gallery: [
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
 		]
 	},
 	{
@@ -65,11 +57,21 @@ const artists = [
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
+		price: 10000,
 		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
+			"./image/other.png",
+			"./image/other.png",
+			"./image/other.png",
+		],
+		gallery: [
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
 		]
 	},
 	{
@@ -79,70 +81,149 @@ const artists = [
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
+		price: 10000,
 		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 9000,
-		description: "Федеральный призидент, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, документального кино, дубляж",
-		characters_photo: [
-			"./image/photo_other.png",
-			"./image/photo_other.png",
+			"./image/other.png",
+			"./image/other.png",
+			"./image/other.png",
+		],
+		gallery: [
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
+			"./image/gallery.png",
 		]
 	},
 ]
 
 artists.forEach((artist, key) => {
 	artist_list.innerHTML += `
-		<li class="swiper-slide other_artist_58f7bdc3" id="artist_${key}">
-			<div class="other_artist_menu_58f7bdc3">
-				<div class="other_artist_menu_buttons_58f7bdc3">
-					<button class="other_artist_menu_button_58f7bdc3 other_artist_menu_button_like_58f7bdc3">
-						<img src="./image/like.svg" alt=""/>
-					</button>
+		<li class="swiper-slide card_58f7bdc3" id="artist_${key}">
+      <div class="bookmark_58f7bdc3">
+        <ul class="artists_58f7bdc3">
+          ${artist.characters_photo.map((character, index) => (
+						`
+							<li class="artist_58f7bdc3">
+								<img class="artist_photo" src=${character} alt="" >
+							</li>
+						`
+					)).join('')}
+        </ul>
 
-					<button class="other_artist_menu_button_58f7bdc3">
-						<img src="./image/download.svg" alt=""/>
+        <p class="bookmark_title_58f7bdc3">Звёздный диктор!</p>
+      </div>
+      
+      	<div class="card_header_58f7bdc3">
+      		<button class="card_header_button_58f7bdc3">
+      			<img class="card_header_button_icon_58f7bdc3" src="./image/download.svg" alt="">
+					</button>
+					
+					<p class="card_header_time_58f7bdc3" id="time_${key}"></p>
+					
+					<button class="card_header_button_58f7bdc3">
+      			<img class="card_header_button_icon_58f7bdc3" src="./image/corona.svg" alt="">
 					</button>
 				</div>
 
-				<p class="other_artist_menu_time_58f7bdc3" id="time_${key}"></p>
+        <button class="like_58f7bdc3">
+          <img class="like_icon_58f7bdc3" src="./image/like_border.svg" alt="">
+        </button>
 
-				<button class="other_artist_menu_button_58f7bdc3">
-					<img src="./image/corona.svg" alt=""/>
-				</button>
-			</div>
+        <div class="profile_58f7bdc3">
+          <div class="player_58f7bdc3" id="audioOnePlayer">
+            <button class="player_button_58f7bdc3" onClick="togglePlay('${key}')">
+              <img class="player_button_play_58f7bdc3" id="button_${key}" src="./image/play.svg" alt="">
+            </button>
 
-			<div class="other_artist_player_58f7bdc3" id="audioOnePlayer">
-				<button class="other_artist_player_button_58f7bdc3" onClick="togglePlay('${key}')">
-					<img class="other_artist_player_player_58f7bdc3" id="button_${key}" src="./image/play.svg" alt=""/>
-				</button>
+            <img class="photo_58f7bdc3" src=${artist.photo} alt="" >
+            <div class="player_bar_58f7bdc3" id="bar_${key}"></div>
+          </div>
 
-				<img class="other_artist_player_photo_58f7bdc3" src="${artist.photo}" alt=""/>
-				<div class="other_artist_player_bar_58f7bdc3" id="bar_${key}"></div>
-			</div>
+          <div class="info_58f7bdc3">
+            <div class="artist_name_58f7bdc3">
+              <a class="artist_name_text_58f7bdc3" href="#">${artist.name}</a>
+              <img class="artist_name_icon_58f7bdc3" src="./image/corona.svg" alt="" >
+            </div>
 
-			<div class="other_artist_info_58f7bdc3">
-				<h2 class="other_artist_name_58f7bdc3">${artist.name}</h2>
-				<p class="other_artist_price_58f7bdc3">
-					Цена от <span class="other_artist_price_bold_58f7bdc3">${artist.price}₽</span>
-				</p>
-			</div>
+            <ul class="statistics_list_58f7bdc3">
+              <li class="statistics_58f7bdc3">
+                <p class="statistics_text stars_text_58f7bdc3">4.9</p>
+                <div class="star_icons_58f7bdc3">
+                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
+                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
+                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
+                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
+                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
+                </div>
+              </li>
 
-			<p class="other_artist_description_58f7bdc3">${artist.description}</p>
+              <li class="statistics_58f7bdc3">
+                <img class="reviews_icon_58f7bdc3" src="./image/review.svg" alt="">
+                <p class="statistics_text_58f7bdc3">100+ отзывов</p>
+              </li>
 
-			<button class="other_artist_button_58f7bdc3" onclick="openForm()">Связаться</button>
-		</li>
+              <li class="statistics_58f7bdc3">
+                <img class="location_icon_58f7bdc3" src="./image/location.svg" alt="">
+                <p class="statistics_text_58f7bdc3">г. Москва, Санкт-Петербург</p>
+              </li>
+            </ul>
+
+            <ul class="tags_58f7bdc3">
+              <li class="tag_check_58f7bdc3">
+                <img class="tag_check_icon_58f7bdc3" src="./image/check.svg" alt="">
+              </li>
+
+              <li class="tag_58f7bdc3">
+                <img class="tag_icon_58f7bdc3" src="./image/rings.svg" alt="">
+                <p class="tag_title_58f7bdc3">Свадьба</p>
+              </li>
+              <li class="tag_58f7bdc3">
+                <img class="tag_icon_58f7bdc3" src="./image/confetti.svg" alt="">
+                <p class="tag_title_58f7bdc3">Корпоратив</p>
+              </li>
+              <li class="tag_58f7bdc3">
+                <img class="tag_icon_58f7bdc3" src="./image/ball.svg" alt="">
+                <p class="tag_title_58f7bdc3">Вечеринка</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="swiper gallery_58f7bdc3 gallery_${key}_58f7bdc3">
+          <ul class="swiper-wrapper">
+          	${artist.gallery.map((item, index) => (
+							`
+								<li class="swiper-slide gallery_item_58f7bdc3">
+		              <img class="gallery_image_58f7bdc3" src=${item} alt="">
+		
+		              <button class="gallery_button_58f7bdc3">
+		                <img class="gallery_button_icon_58f7bdc3" src="./image/play.svg" alt="">
+		              </button>
+		            </li>
+							`
+						)).join('')}
+          </ul>
+        </div>
+
+        <div class="card_footer_58f7bdc3">
+          <div class="card_price_58f7bdc3">
+            <img class="card_price_icon_58f7bdc3" src="./image/price.svg" alt="">
+            <p class="card_price_text_58f7bdc3">
+            	Цена от 
+            	<span class="card_price_text_bold_58f7bdc3">${artist.price} ₽</span>
+            </p>
+          </div>
+
+          <div class="card_menu_58f7bdc3">
+            <button class="card_button_58f7bdc3 card_button_border_58f7bdc3">Проверить дату</button>
+            <button class="card_button_58f7bdc3 card_button_full_58f7bdc3" onclick="openForm()">Заказать</button>
+          </div>
+        </div>
+      </li>
 	`
 })
 
@@ -160,6 +241,13 @@ artists.forEach((artist, key) => {
 			width: '100%'
 		},
 	});
+
+	const gallery = new Swiper(`.gallery_${key}_58f7bdc3`, {
+		direction: 'horizontal',
+		loop: true,
+		spaceBetween: 12,
+		slidesPerView: 4
+	})
 
 	document.getElementById(`bar_${key}`).addEventListener('click', function(e) {
 		const rect = this.getBoundingClientRect();
@@ -193,7 +281,7 @@ function togglePlay(id) {
 		const block = document.getElementById(`artist_${key}`);
 
 		if (key.toString() !== id) {
-			buttonImage.classList = "other_artist_player_player_58f7bdc3"
+			buttonImage.classList = "player_button_play_58f7bdc3"
 			buttonImage.src = "./image/play.svg"
 			block.classList.remove("other_artist_active_58f7bdc3");
 			artist.isPlaying = false;
@@ -201,12 +289,12 @@ function togglePlay(id) {
 		} else {
 			if (artists[id].isPlaying) {
 				artists[id].audio.pause();
-				buttonImage.classList = "other_artist_player_player_58f7bdc3"
+				buttonImage.classList = "player_button_play_58f7bdc3"
 				buttonImage.src = "./image/play.svg"
 				block.classList.remove("other_artist_active_58f7bdc3");
 			} else {
 				artists[id].audio.play();
-				buttonImage.classList = "other_artist_player_pause_58f7bdc3"
+				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
 				block.classList.add("other_artist_active_58f7bdc3");
 			}
@@ -785,7 +873,7 @@ const other_artist = new Swiper(".other_artists_58f7bdc3", {
 	breakpoints: {
 		810: {
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 20,
 		},
 	}
 })

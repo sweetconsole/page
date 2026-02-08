@@ -9,11 +9,7 @@
 		left: 0;
 		top: 0;
 		z-index: 10;
-	}
-}
-
-.header_active_58f7bdc3 {
-	@media screen and (max-width: 810px) {
+		margin-top: 0;
 		background-color: #C1492E;
 	}
 }
@@ -179,6 +175,7 @@
 	}
 
 	@media screen and (max-width: 810px) {
+		height: 70px;
 		padding: 0 10px;
 	}
 }
