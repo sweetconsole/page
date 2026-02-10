@@ -457,7 +457,7 @@
 	text-decoration: underline;
 	text-decoration-color: transparent;
 	margin-bottom: 13px;
-	transition: all .2s ease-in-out;П
+	transition: all .2s ease-in-out;
 
 	@media screen and (max-width: 1280px) {
 		font-size: 18px;
