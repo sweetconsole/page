@@ -4,6 +4,7 @@ const menu_link_3 = document.getElementById("menu_link_3");
 const menu_link_4 = document.getElementById("menu_link_4");
 
 let isViewMenuLinks = false;
+let currentMenuLink = null;
 
 const header = document.getElementById("header_58f7bdc3");
 
@@ -26,7 +27,14 @@ function toggle(id) {
 
 		menu.classList.add("header_bottom_navigation_block_active");
 		isViewMenuLinks = true;
+		currentMenuLink = id
 	} else {
+		if (currentMenuLink !== id) {
+			const menu = document.getElementById(id)
+
+			menu.classList.add("header_bottom_navigation_block_active");
+		}
+
 		isViewMenuLinks = false;
 	}
 }

@@ -139,7 +139,7 @@ artists.forEach((artist, key) => {
               <img class="player_button_play_58f7bdc3" id="button_${key}" src="./image/play.svg" alt="">
             </button>
 
-            <img class="photo_58f7bdc3" src=${artist.photo} alt="" >
+            <img class="player_photo_58f7bdc3" src=${artist.photo} alt="" >
             <div class="player_bar_58f7bdc3" id="bar_${key}"></div>
           </div>
 

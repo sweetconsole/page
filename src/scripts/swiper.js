@@ -35,7 +35,7 @@ const video_list = new Swiper('.info_list_video_58f7bdc3', {
 
 const photo_list = new Swiper('.info_list_photo_58f7bdc3', {
 	slidesPerView: 2,
-	spaceBetween: 3,
+	spaceBetween: 10,
 	grid: {
 		rows: 3,
 		fill: "row"

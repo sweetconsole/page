@@ -119,7 +119,14 @@
 }
 
 .menu_list_chapter_content_58f7bdc3 {
+	display: flex;
+	flex-direction: column;
+}
 
+.menu_list_chapter_content_58f7bdc3 a {
+	@media screen and (max-width: 810px) {
+		text-decoration: underline;
+	}
 }
 
 .menu_list_subchapter_58f7bdc3 {

@@ -188,6 +188,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
+	@media screen and (max-width: 810px) {
+		height: 100px !important;
+	}
 }
 
 .info_photo_58f7bdc3 img {
@@ -196,6 +200,12 @@
 	object-fit: cover;
 	border-radius: 20px;
 	transition: all .2s ease-in-out;
+	
+	@media screen and (max-width: 810px) {
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+	}
 }
 
 .info_photo_58f7bdc3:hover img {
