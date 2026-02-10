@@ -385,6 +385,13 @@
 	color: #3B4173;
 	font-size: 20px;
 	line-height: 23px;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: all .2s ease-in-out;
+}
+
+.header_bottom_navigation_links_chapter_link:hover {
+	text-decoration-color: #3b4173;
 }
 
 .header_bottom_navigation_footer {
