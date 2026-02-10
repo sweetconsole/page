@@ -536,6 +536,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	});
 });
+const menu_link_1 = document.getElementById("menu_link_1");
+const menu_link_2 = document.getElementById("menu_link_2");
+const menu_link_3 = document.getElementById("menu_link_3");
+const menu_link_4 = document.getElementById("menu_link_4");
+
+let isViewMenuLinks = false;
 
 const header = document.getElementById("header_58f7bdc3");
 
@@ -546,6 +552,22 @@ window.addEventListener("scroll", () => {
 		header.classList.remove("header_active_58f7bdc3");
 	}
 })
+
+function toggle(id) {
+	menu_link_1.classList.remove("header_bottom_navigation_block_active");
+	menu_link_2.classList.remove("header_bottom_navigation_block_active");
+	menu_link_3.classList.remove("header_bottom_navigation_block_active");
+	menu_link_4.classList.remove("header_bottom_navigation_block_active");
+
+	if (!isViewMenuLinks) {
+		const menu = document.getElementById(id)
+
+		menu.classList.add("header_bottom_navigation_block_active");
+		isViewMenuLinks = true;
+	} else {
+		isViewMenuLinks = false;
+	}
+}
 const menu = document.getElementById("menu_58f7bdc3");
 const buttonMenu = document.getElementById("header_button_menu_58f7bdc3");
 let view = false
@@ -867,8 +889,8 @@ const other_artist = new Swiper(".other_artists_58f7bdc3", {
 	slidesPerView: 2,
 	spaceBetween: 10,
 	navigation: {
-		nextEl: '.info_swiper_button_next_photo_58f7bdc3',
-		prevEl: '.info_swiper_button_prev_photo_58f7bdc3',
+		nextEl: '.info_swiper_button_next_artist_58f7bdc3',
+		prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',
 	},
 	breakpoints: {
 		810: {

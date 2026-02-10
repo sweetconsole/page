@@ -54,6 +54,37 @@
 }
 
 /* ARTISTS */
+.other_container_58f7bdc3 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.info_swiper_button_page_artist_58f7bdc3 {
+	margin-top: 105px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid #C1492E;
+	display: flex;
+	background-color: transparent;
+	align-items: center;
+	justify-content: center;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
+}
+
+.info_swiper_button_page_artist_58f7bdc3:hover {
+	background-color: #C1492E;
+}
+
+.info_swiper_button_page_artist_58f7bdc3:hover img {
+	filter: grayscale(100%) brightness(504%);
+}
+
 .other_artists_58f7bdc3 {
 	width: 100%;
 	max-width: 900px;
