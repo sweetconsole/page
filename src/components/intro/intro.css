@@ -58,18 +58,25 @@
 	display: flex;
 	gap: 10px;
 	align-items: center;
+	color: #C1492E;
 	border-radius: 100px;
+	cursor: default;
 	border: 1px solid #C1492E;
+}
+
+.intro_tag_58f7bdc3:hover {
+	background-color: #C1492E;
+	color: white;
 }
 
 .intro_tag_icon_58f7bdc3 {
 	width: 21px;
 	height: 21px;
+	object-fit: contain;
 }
 
 .intro_tag_title_58f7bdc3 {
 	font-size: 15px;
 	line-height: 18px;
-	color: #C1492E;
 	font-weight: 700;
 }

@@ -115,20 +115,8 @@ artists.forEach((artist, key) => {
         </ul>
 
         <p class="bookmark_title_58f7bdc3">Звёздный диктор!</p>
+        <p class="bookmark_text_58f7bdc3">Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, </p>
       </div>
-      
-      	<div class="card_header_58f7bdc3">
-      		<button class="card_header_button_58f7bdc3">
-      			<img class="card_header_button_icon_58f7bdc3" src="./image/download.svg" alt="">
-					</button>
-					
-					<p class="card_header_time_58f7bdc3" id="time_${key}"></p>
-					
-					<button class="card_header_button_58f7bdc3">
-      			<img class="card_header_button_icon_58f7bdc3" src="./image/corona.svg" alt="">
-					</button>
-				</div>
-
         <button class="like_58f7bdc3">
           <img class="like_icon_58f7bdc3" src="./image/like_border.svg" alt="">
         </button>
@@ -143,7 +131,7 @@ artists.forEach((artist, key) => {
             <div class="player_bar_58f7bdc3" id="bar_${key}"></div>
           </div>
 
-          <div class="info_58f7bdc3">
+          <div class="card_info_58f7bdc3">
             <div class="artist_name_58f7bdc3">
               <a class="artist_name_text_58f7bdc3" href="#">${artist.name}</a>
               <img class="artist_name_icon_58f7bdc3" src="./image/corona.svg" alt="" >
@@ -212,9 +200,13 @@ artists.forEach((artist, key) => {
         <div class="card_footer_58f7bdc3">
           <div class="card_price_58f7bdc3">
             <img class="card_price_icon_58f7bdc3" src="./image/price.svg" alt="">
-            <p class="card_price_text_58f7bdc3">
-            	Цена от 
+            <p class="card_price_text_desktop_58f7bdc3">
+            	 Цена от 
             	<span class="card_price_text_bold_58f7bdc3">${artist.price} ₽</span>
+            </p>
+            <p class="card_price_text_mobile_58f7bdc3">
+            	 От 
+            	<span class="card_price_text_bold_58f7bdc3">${artist.price}₽</span>
             </p>
           </div>
 
@@ -245,8 +237,14 @@ artists.forEach((artist, key) => {
 	const gallery = new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
 		loop: true,
-		spaceBetween: 12,
-		slidesPerView: 4
+		spaceBetween: 10,
+		slidesPerView: 2,
+		breakpoints: {
+			810: {
+				spaceBetween: 12,
+				slidesPerView: 4,
+			}
+		}
 	})
 
 	document.getElementById(`bar_${key}`).addEventListener('click', function(e) {
