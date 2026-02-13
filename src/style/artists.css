@@ -27372,9 +27372,6 @@ a.whatsapp, a.telegram {
 }
 
 @media (max-width: 810px) {
-	.swiper-slide {
-		width: 320px !important;
-	}
 
 	.artists_58f7bdc3_filter {
 		display: none;
