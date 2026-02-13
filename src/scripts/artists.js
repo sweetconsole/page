@@ -140,7 +140,7 @@ artists.forEach((artist, key) => {
 
             <ul class="statistics_list_58f7bdc3">
               <li class="statistics_58f7bdc3">
-                <p class="statistics_text stars_text_58f7bdc3">4.9</p>
+                <p class="statistics_text_58f7bdc3 stars_text_58f7bdc3">4.9</p>
                 <div class="star_icons_58f7bdc3">
                   <img class="star_58f7bdc3" src="./image/star.svg" alt="">
                   <img class="star_58f7bdc3" src="./image/star.svg" alt="">

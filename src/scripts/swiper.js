@@ -63,31 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
 } )
 
 
-const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
-	slidesPerView: 1,
-	spaceBetween: 10,
-	grid: {
-		rows: 5,
-		fill: "row"
-	},
-	breakpoints: {
-		810: {
-			spaceBetween: 20,
-		}
-	},
-	pagination: {
-		el: '.info_comment_pagination_58f7bdc3',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (index + 1) + "</span>";
-		},
-	},
-	navigation: {
-		nextEl: '.info_swiper_button_next_comments_58f7bdc3',
-		prevEl: '.info_swiper_button_prev_comments_58f7bdc3',
-	},
-});
-
 const movies_list = new Swiper('.info_list_movies_58f7bdc3', {
 	slidesPerView: 2,
 	spaceBetween: 20,

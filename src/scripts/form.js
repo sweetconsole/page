@@ -1,7 +1,7 @@
 
 const body = document.getElementById("body")
 const popup = document.getElementById("form_58f7bdc3")
-const background = document.getElementById("background_58f7bdc3")
+
 let isView = true
 
 function openForm() {

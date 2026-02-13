@@ -140,7 +140,7 @@ artists.forEach((artist, key) => {
 
             <ul class="statistics_list_58f7bdc3">
               <li class="statistics_58f7bdc3">
-                <p class="statistics_text stars_text_58f7bdc3">4.9</p>
+                <p class="statistics_text_58f7bdc3 stars_text_58f7bdc3">4.9</p>
                 <div class="star_icons_58f7bdc3">
                   <img class="star_58f7bdc3" src="./image/star.svg" alt="">
                   <img class="star_58f7bdc3" src="./image/star.svg" alt="">
@@ -314,10 +314,58 @@ function formatTime(seconds) {
 	const secs = Math.floor(seconds % 60);
 	return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
+const background = document.getElementById("background_58f7bdc3")
+
+background.addEventListener("click", function () {
+	closeForm()
+	closeVideoPopup()
+})
+const commentsBlock = document.querySelector('.info_comments_list_58f7bdc3');
+const buttonComments = document.getElementById("info_comment_add_58f7bdc3")
+const commentsCount = commentsBlock.getElementsByTagName('li').length
+
+const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
+	slidesPerView: 1,
+	spaceBetween: 10,
+	grid: {
+		rows: 5,
+		fill: "row"
+	},
+	breakpoints: {
+		810: {
+			spaceBetween: 20,
+		}
+	},
+	pagination: {
+		el: '.info_comment_pagination_58f7bdc3',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (index + 1) + "</span>";
+		},
+	},
+	navigation: {
+		nextEl: '.info_swiper_button_next_comments_58f7bdc3',
+		prevEl: '.info_swiper_button_prev_comments_58f7bdc3',
+	},
+});
+
+function showMoreComments() {
+	if (commentsCount > comments_list.params.grid.rows) {
+		console.log(commentsCount, comments_list.params.grid.rows);
+		comments_list.params.grid.rows += 5;
+		comments_list.update();
+
+		if (commentsCount <= comments_list.params.grid.rows) {
+			buttonComments.classList.add("info_comment_add_disabled_58f7bdc3");
+		}
+	} else {
+		buttonComments.classList.add("info_comment_add_disabled_58f7bdc3");
+	}
+}
 
 const body = document.getElementById("body")
 const popup = document.getElementById("form_58f7bdc3")
-const background = document.getElementById("background_58f7bdc3")
+
 let isView = true
 
 function openForm() {
@@ -855,31 +903,6 @@ document.addEventListener('DOMContentLoaded', function() {
 } )
 
 
-const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
-	slidesPerView: 1,
-	spaceBetween: 10,
-	grid: {
-		rows: 5,
-		fill: "row"
-	},
-	breakpoints: {
-		810: {
-			spaceBetween: 20,
-		}
-	},
-	pagination: {
-		el: '.info_comment_pagination_58f7bdc3',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (index + 1) + "</span>";
-		},
-	},
-	navigation: {
-		nextEl: '.info_swiper_button_next_comments_58f7bdc3',
-		prevEl: '.info_swiper_button_prev_comments_58f7bdc3',
-	},
-});
-
 const movies_list = new Swiper('.info_list_movies_58f7bdc3', {
 	slidesPerView: 2,
 	spaceBetween: 20,
@@ -900,3 +923,19 @@ const other_artist = new Swiper(".other_artists_58f7bdc3", {
 		prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',
 	},
 })
+
+const videoPopup = document.getElementById("video_player_58f7bdc3")
+const videoPlayer= document.getElementById("video_player_src_58f7bdc3")
+
+function openVideoPopup(url) {
+	videoPopup.classList.add("video_player_58f7bdc3_active")
+	background.classList.add("background_58f7bdc3_active")
+	videoPlayer.src = url
+	body.style.overflow = "hidden"
+}
+
+function closeVideoPopup() {
+	videoPopup.classList.remove("video_player_58f7bdc3_active")
+	background.classList.remove("background_58f7bdc3_active")
+	body.style.overflow = "auto"
+}
