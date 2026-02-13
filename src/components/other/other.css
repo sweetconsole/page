@@ -194,6 +194,7 @@
 
 .bookmark_text_58f7bdc3 {
 	display: none;
+	line-height: 100%;
 
 	@media screen and (max-width: 810px) {
 		font-size: 7px;
