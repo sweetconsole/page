@@ -248,6 +248,16 @@
 	}
 }
 
+.like_icon_hover_58f7bdc3 {
+	position: absolute;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+}
+
+.like_icon_hover_58f7bdc3:hover {
+	opacity: 1;
+}
+
 .like_icon_58f7bdc3 {
 	width: 30px;
 	height: 25px;
@@ -481,18 +491,25 @@
 	gap: 10px;
 	align-items: center;
 	border-radius: 100px;
+	color: var(--color-accent);
 	border: 2px solid var(--color-accent);
+	transition: all .2s ease-in-out;
+}
+
+.tag_58f7bdc3:hover {
+	background-color: #C1492E;
+	color: white;
 }
 
 .tag_icon_58f7bdc3 {
 	width: 21px;
 	height: 21px;
+	object-fit: contain;
 }
 
 .tag_title_58f7bdc3 {
 	font-size: 15px;
 	line-height: 18px;
-	color: var(--color-accent);
 	font-weight: 700;
 }
 

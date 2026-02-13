@@ -118,6 +118,7 @@ artists.forEach((artist, key) => {
         <p class="bookmark_text_58f7bdc3">Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, </p>
       </div>
         <button class="like_58f7bdc3">
+        	<img class="like_icon_hover_58f7bdc3" src="./image/like_fill.svg" alt="">
           <img class="like_icon_58f7bdc3" src="./image/like_border.svg" alt="">
         </button>
 
