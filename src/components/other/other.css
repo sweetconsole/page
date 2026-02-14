@@ -194,17 +194,17 @@
 }
 
 .bookmark_text_58f7bdc3 {
+	font-size: 6px;
+	text-align: center;
+	color: white;
+	font-weight: 500;
+	max-width: 107px;
+	text-transform: uppercase;
 	display: none;
-	line-height: 100%;
+	line-height: 120%;
 
 	@media screen and (max-width: 810px) {
-		font-size: 7px;
-		text-align: center;
 		display: block;
-		color: white;
-		font-weight: 500;
-		max-width: 110px;
-		text-transform: uppercase;
 	}
 }
 
@@ -494,7 +494,7 @@
 	align-items: center;
 	border-radius: 100px;
 	color: var(--color-accent);
-	border: 3px solid var(--color-accent);
+	border: 1px solid var(--color-accent);
 	transition: all .2s ease-in-out;
 }
 
@@ -649,7 +649,7 @@
 	width: 160px;
 	height: 50px;
 	border-radius: 15px;
-	border: 3px solid var(--color-accent);
+	border: 1px solid var(--color-accent);
 	cursor: pointer;
 	font-size: 15px;
 	line-height: 135%;

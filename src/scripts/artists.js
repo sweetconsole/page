@@ -6,6 +6,7 @@ const artists = [
 		circle: null,
 		isPlaying: false,
 		isShowing: false,
+		isAudioEnded: false,
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
@@ -30,6 +31,7 @@ const artists = [
 		circle: null,
 		isPlaying: false,
 		isShowing: false,
+		isAudioEnded: false,
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
@@ -54,6 +56,7 @@ const artists = [
 		circle: null,
 		isPlaying: false,
 		isShowing: false,
+		isAudioEnded: false,
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
@@ -78,6 +81,7 @@ const artists = [
 		circle: null,
 		isPlaying: false,
 		isShowing: false,
+		isAudioEnded: false,
 		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
 		photo: "./image/other_artist.png",
 		name: "Сергей Чонишвили",
@@ -115,7 +119,7 @@ artists.forEach((artist, key) => {
         </ul>
 
         <p class="bookmark_title_58f7bdc3">Звёздный диктор!</p>
-        <p class="bookmark_text_58f7bdc3">Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы, </p>
+        <p class="bookmark_text_58f7bdc3">Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы</p>
       </div>
         <button class="like_58f7bdc3">
         	<img class="like_icon_hover_58f7bdc3" src="./image/like_fill.svg" alt="">
@@ -221,6 +225,9 @@ artists.forEach((artist, key) => {
 })
 
 artists.forEach((artist, key) => {
+	let currentProgress = 0
+	let targetProgress = 0
+	let animationFrame = null
 	const audio = artist.audio
 
 	artist.circle = new ProgressBar.Circle(`#bar_${key}`, {
@@ -228,12 +235,13 @@ artists.forEach((artist, key) => {
 		strokeWidth: 5,
 		trailWidth: 5,
 		trailColor: '#fff',
-		duration: 100,
 		svgStyle: {
 			display: 'block',
 			width: '100%'
 		},
 	});
+
+	artist.circle.set(0);
 
 	const gallery = new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
@@ -263,14 +271,48 @@ artists.forEach((artist, key) => {
 
 		audio.currentTime = progress * audio.duration;
 		artist.circle.set(progress);
-		changeView(key)
 	});
 
-	audio.addEventListener('timeupdate', function() {
-		const progress = audio.currentTime / audio.duration;
+	function smoothAnimation() {
+		const diff = targetProgress - currentProgress
+		const smoothFactor = 0.15
 
-		artists[key].circle.animate(progress);
-		updateTime(key);
+		currentProgress += diff * smoothFactor
+
+		artist.circle.animate(currentProgress, {
+			duration: 50,
+			easing: 'linear'
+		})
+
+		if (Math.abs(diff) > 0.001) {
+			animationFrame = requestAnimationFrame(smoothAnimation)
+		} else {
+			artist.circle.set(targetProgress)
+			animationFrame = null
+		}
+	}
+
+	artist.audio.addEventListener('timeupdate', function() {
+		targetProgress = this.currentTime / this.duration
+
+		if (!animationFrame && targetProgress !== 1) {
+			animationFrame = requestAnimationFrame(smoothAnimation)
+		}
+
+		if (targetProgress === 1) {
+			artist.circle.set(0);
+		}
+	});
+
+	artist.audio.addEventListener('ended', function() {
+		artist.circle.set(0);
+
+		const buttonImage = document.getElementById(`button_${key}`);
+		buttonImage.classList = "player_button_play_58f7bdc3";
+		buttonImage.src = "./image/play.svg"
+
+		artist.isPlaying = false;
+		artist.isAudioEnded = true;
 	});
 })
 
@@ -292,6 +334,7 @@ function togglePlay(id) {
 				buttonImage.src = "./image/play.svg"
 				block.classList.remove("other_artist_active_58f7bdc3");
 			} else {
+				artists[id].isAudioEnded = false;
 				artists[id].audio.play();
 				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
@@ -301,16 +344,4 @@ function togglePlay(id) {
 			artists[id].isPlaying = !artists[id].isPlaying;
 		}
 	})
-}
-
-function updateTime(id) {
-	const current = formatTime(artists[id].audio.currentTime);
-	document.getElementById(`time_${id}`).textContent = `${current}`;
-}
-
-function formatTime(seconds) {
-	if (isNaN(seconds)) return '0:00';
-	const mins = Math.floor(seconds / 60);
-	const secs = Math.floor(seconds % 60);
-	return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
