@@ -954,7 +954,6 @@ const other_artist = new Swiper(".other_artists_58f7bdc3", {
 		prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',
 	},
 })
-
 const videoPopup = document.getElementById("video_player_58f7bdc3")
 const videoPlayer= document.getElementById("video_player_src_58f7bdc3")
 
@@ -966,7 +965,13 @@ function openVideoPopup(url) {
 }
 
 function closeVideoPopup() {
+	const video = videoPlayer.getElementsByTagName("video")[0];
+
 	videoPopup.classList.remove("video_player_58f7bdc3_active")
 	background.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
+
+	console.log(video)
+
+	videoPlayer.contentWindow.postMessage(JSON.stringify({type: 'player:pause',data: {}}), '*');
 }

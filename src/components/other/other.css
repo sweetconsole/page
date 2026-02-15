@@ -121,10 +121,14 @@
 	padding-right: 35px;
 	padding-top: 36px;
 
+
 	@media screen and (max-width: 810px) {
 		width: 320px;
 		height: auto;
 		padding: 32px 0 22px;
+		border-top: 1px solid rgba(187, 187, 187, 1);
+		border-bottom: 1px solid rgba(187, 187, 187, 1);
+		border-radius: 0;
 		background-color: transparent;
 	}
 }
