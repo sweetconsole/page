@@ -1,7 +1,7 @@
 
 const artist_list = document.getElementById('other_list_artist_58f7bdc3');
 
-const artists = [
+const z_artists = [
 	{
 		circle: null,
 		isPlaying: false,
@@ -104,7 +104,7 @@ const artists = [
 	},
 ]
 
-artists.forEach((artist, key) => {
+z_artists.forEach((artist, key) => {
 	artist_list.innerHTML += `
 		<li class="swiper-slide card_58f7bdc3" id="artist_${key}">
       <div class="bookmark_58f7bdc3">
@@ -216,15 +216,39 @@ artists.forEach((artist, key) => {
           </div>
 
           <div class="card_menu_58f7bdc3">
-            <button class="card_button_58f7bdc3 card_button_border_58f7bdc3">Проверить дату</button>
+            <button class="card_button_58f7bdc3 card_button_border_58f7bdc3" id="openCalendar">Проверить дату</button>
             <button class="card_button_58f7bdc3 card_button_full_58f7bdc3" onclick="openForm()">Заказать</button>
           </div>
         </div>
+        
+        <div class="calendar" id="calendar">
+\t<div class="calendar-header">
+\t\t<button class="nav-btn prev-month" title="Предыдущий месяц">
+\t\t\t<img src="./image/arrow_left.svg" alt="<">
+\t\t</button>
+
+\t\t<div class="month-year-selector">
+\t\t\t<select class="month-select" id="monthSelect"></select>
+\t\t\t<select class="year-select" id="yearSelect"></select>
+\t\t</div>
+
+\t\t<button class="nav-btn next-month" title="Следующий месяц">
+\t\t\t<img src="./image/arrow_right.svg" alt=">">
+\t\t</button>
+\t</div>
+
+\t<div class="weekdays">
+\t\t<div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
+\t\t<div>Пт</div><div>Сб</div><div>Вс</div>
+\t</div>
+
+\t<div class="days" id="calendarDays"></div>
+</div>
       </li>
 	`
 })
 
-artists.forEach((artist, key) => {
+z_artists.forEach((artist, key) => {
 	let currentProgress = 0
 	let targetProgress = 0
 	let animationFrame = null
@@ -317,7 +341,7 @@ artists.forEach((artist, key) => {
 })
 
 function togglePlay(id) {
-	artists.forEach((artist, key) => {
+	z_artists.forEach((artist, key) => {
 		const buttonImage = document.getElementById(`button_${key}`);
 		const block = document.getElementById(`artist_${key}`);
 
@@ -328,20 +352,20 @@ function togglePlay(id) {
 			artist.isPlaying = false;
 			artist.audio.pause();
 		} else {
-			if (artists[id].isPlaying) {
-				artists[id].audio.pause();
+			if (z_artists[id].isPlaying) {
+				z_artists[id].audio.pause();
 				buttonImage.classList = "player_button_play_58f7bdc3"
 				buttonImage.src = "./image/play.svg"
 				block.classList.remove("other_artist_active_58f7bdc3");
 			} else {
-				artists[id].isAudioEnded = false;
-				artists[id].audio.play();
+				z_artists[id].isAudioEnded = false;
+				z_artists[id].audio.play();
 				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
 				block.classList.add("other_artist_active_58f7bdc3");
 			}
 
-			artists[id].isPlaying = !artists[id].isPlaying;
+			z_artists[id].isPlaying = !z_artists[id].isPlaying;
 		}
 	})
 }

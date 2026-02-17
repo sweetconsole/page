@@ -1,6 +1,10 @@
 const commentsBlock = document.querySelector('.info_comments_list_58f7bdc3');
 const buttonComments = document.getElementById("info_comment_add_58f7bdc3")
-const commentsCount = commentsBlock.getElementsByTagName('li').length
+let commentsCount = null
+
+if (commentsBlock) {
+	commentsCount = commentsBlock.getElementsByTagName('li').length
+}
 
 const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
 	slidesPerView: 1,
