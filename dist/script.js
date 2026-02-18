@@ -3,6 +3,7 @@ const background = document.getElementById("background_58f7bdc3")
 background.addEventListener("click", function () {
 	closeForm()
 	closeVideoPopup()
+	closeMenuForm()
 })
 const commentsBlock = document.querySelector('.info_comments_list_58f7bdc3');
 const buttonComments = document.getElementById("info_comment_add_58f7bdc3")
@@ -282,7 +283,7 @@ let currentMenuLink = null;
 const header = document.getElementById("header_58f7bdc3");
 
 window.addEventListener("scroll", () => {
-	if (window.pageYOffset !== 0) {
+	if (window.pageYOffset >= 115) {
 		header.classList.add("header_active_58f7bdc3");
 	} else {
 		header.classList.remove("header_active_58f7bdc3");
@@ -325,6 +326,26 @@ function toggleMenu() {
 	buttonMenu.classList.toggle("header_button_menu_active_58f7bdc3")
 	menu.classList.toggle("menu_active_58f7bdc3");
 	view = !view;
+}
+
+const menuForm = document.getElementById("menu_form_58f7bdc3")
+
+function openMenuForm() {
+	menuForm.classList.add("form_58f7bdc3_active")
+	background.classList.add("background_58f7bdc3_active")
+	body.style.overflow = "hidden"
+}
+
+function closeMenuForm() {
+	menuForm.classList.remove("form_58f7bdc3_active")
+	background.classList.remove("background_58f7bdc3_active")
+	body.style.overflow = "auto"
+}
+
+function submitMenuForm() {
+	console.log("Submit")
+
+	closeForm()
 }
 
 

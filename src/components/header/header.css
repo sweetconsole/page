@@ -1,6 +1,5 @@
 .header_58f7bdc3 {
 	margin-top: 30px;
-	margin-bottom: 50px;
 	background-color: transparent;
 	transition: all .2s ease-in-out;
 
@@ -173,6 +172,17 @@
 
 /* HEADER BOTTOM */
 .header_bottom_58f7bdc3 {
+	position: sticky;
+	top: 0;
+	margin-bottom: 50px;
+	transition: all .2s ease-in-out;
+}
+
+.header_active_58f7bdc3 {
+	background-color: #C1492E;
+}
+
+.header_bottom_block_58f7bdc3 {
 	height: 100px;
   background-color: #C1492E;
 	border-radius: 25px;
@@ -180,7 +190,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relative;
 
 	@media screen and (max-width: 1280px) {
 		border-radius: 15px;
@@ -463,14 +472,14 @@
 
 .header_bottom_navigation_info {
 	max-width: 260px;
-	height: 360px;
+	height: 340px;
 	background-color: #C1492E;
 	border-radius: 55px;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 20px;
 	position: relative;
-	padding: 30px;
+	padding: 45px 33px 33px;
 }
 
 .header_bottom_navigation_info_title {
@@ -480,23 +489,51 @@
 	color: white;
 }
 
-.header_bottom_navigation_info_list {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.header_bottom_navigation_info_item {
+.header_bottom_navigation_info_text {
 	font-size: 15px;
 	line-height: 135%;
 	color: #F6F6F6
+}
+
+.header_bottom_navigation_info_button {
+	height: 50px;
+	width: calc(100% - 66px);
+	position: absolute;
+	bottom: 40px;
+	border-radius: 15px;
+	font-size: 15px;
+	line-height: 135%;
+	font-weight: 500;
+	color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	z-index: 10;
+	transition: all .2s ease-in-out;
+}
+
+.header_bottom_navigation_info_button:hover {
+	background-color: white;
+	color: #C1492E;
 }
 
 .header_bottom_navigation_info_image {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	pointer-events: none;
 }
+
+/*.header_bottom_navigation_info_list {*/
+/*	display: flex;*/
+/*	flex-direction: column;*/
+/*	gap: 15px;*/
+/*}*/
+
+/*.header_bottom_navigation_info_item {*/
+/*	font-size: 15px;*/
+/*	line-height: 135%;*/
+/*	color: #F6F6F6*/
+/*}*/
 
 
 .header_bottom_buttons_58f7bdc3 {
