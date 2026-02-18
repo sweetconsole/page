@@ -26847,6 +26847,7 @@ body {
     color: black;
     font-weight: 400;
     position: relative;
+    overflow-x: hidden;
 }
 
 a,
@@ -29614,10 +29615,7 @@ button {
 .other_artists_58f7bdc3 {
 	width: 100%;
 	max-width: 900px;
-}
-
-.other_list_artist_58f7bdc3 {
-
+	overflow: visible;
 }
 
 .other_artist_58f7bdc3 {
@@ -29663,6 +29661,17 @@ button {
 		border-radius: 0;
 		background-color: transparent;
 	}
+}
+
+
+.swiper.card_58f7bdc3 {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.swiper.card_58f7bdc3.swiper-slide-active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .bookmark_58f7bdc3 {

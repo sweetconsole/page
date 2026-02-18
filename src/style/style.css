@@ -12,6 +12,7 @@ body {
     color: black;
     font-weight: 400;
     position: relative;
+    overflow-x: hidden;
 }
 
 a,
