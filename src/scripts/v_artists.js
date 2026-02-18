@@ -190,7 +190,7 @@ z_artists.forEach((artist, key) => {
           <ul class="swiper-wrapper">
           	${artist.gallery.map((item, index) => (
 							`
-								<li class="swiper-slide gallery_item_58f7bdc3">
+								<li class="swiper-slide gallery_item_58f7bdc3" onclick="openVideoPopup('https://rutube.ru/play/embed/396c102de740d5cfc6ebc42b2616667d')">
 		              <img class="gallery_image_58f7bdc3" src=${item} alt="">
 		
 		              <button class="gallery_button_58f7bdc3">
