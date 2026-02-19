@@ -930,7 +930,7 @@ z_artists.forEach((artist, key) => {
           </div>
         </div>
         
-        <div class="calendar" id="calendar-${key}">
+        <div class="calendar card_calendar" id="calendar-${key}">
 \t<div class="calendar-header">
 \t\t<button class="nav-btn prev-month-${key}" title="Предыдущий месяц">
 \t\t\t<img src="./image/arrow_left.svg" alt="<">

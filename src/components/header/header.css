@@ -175,6 +175,7 @@
 	position: sticky;
 	top: 0;
 	margin-bottom: 50px;
+	z-index: 200;
 	transition: all .2s ease-in-out;
 }
 
