@@ -136,7 +136,7 @@
 				<summary class="menu_list_chapter_58f7bdc3">Рейтинги</summary>
 
 				<div class="menu_list_chapter_content_58f7bdc3">
-					<a class="menu_list_subchapter_58f7bdc3" href="#">Преподаватели вокала</a>
+					<a class="menu_list_subchapter_58f7bdc3" href="#">Ведущие</a>
 					<a class="menu_list_subchapter_58f7bdc3" href="#">Преподаватели музыки</a>
 				</div>
 			</details>
@@ -192,7 +192,26 @@
     
 <div class="form_58f7bdc3" id="form_58f7bdc3">
 	<input class="form_input_58f7bdc3" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
-	<input class="form_input_58f7bdc3 form_input_date_58f7bdc3" type="text" placeholder="Событие" aria-label="Событие" readonly>
+
+	<div class="form_select_container">
+		<div class="form_select">
+			<p class="form_select_value">Выберите событие</p>
+		</div>
+
+		<select class="form_hidden_select" id="eventSelect" name="city">
+			<option value="" disabled selected>Выберите событие</option>
+			<option value="wedding">Свадьба</option>
+			<option value="anniversary">Юбилей</option>
+			<option value="corporate">Корпоратив</option>
+		</select>
+
+		<div class="form_options">
+			<div class="form_option" data-value="">Выберите событие</div>
+			<div class="form_option" data-value="wedding">Свадьба</div>
+			<div class="form_option" data-value="anniversary">Юбилей</div>
+			<div class="form_option" data-value="corporate ">Корпоратив</div>
+		</div>
+	</div>
 
 	<div class="form_input_date_58f7bdc3">
 		<input class="form_input_58f7bdc3" id="dateInput" placeholder="День события" type="text" readonly>
