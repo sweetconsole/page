@@ -1,15 +1,15 @@
 
 <div class="form_58f7bdc3" id="form_58f7bdc3">
-	<input class="form_input_58f7bdc3" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
-	<input class="form_input_58f7bdc3" type="text" placeholder="Событие" aria-label="Введите событие" required>
+	<input class="form_input_58f7bdc3" type="text" placeholder="Ваше имя" aria-label="Ваше имя" name="name" required>
+	<input class="form_input_58f7bdc3" type="text" placeholder="Событие" aria-label="Введите событие" name="event" required>
 
 	<div class="form_input_date_58f7bdc3">
-		<input class="form_input_58f7bdc3" id="dateInput" placeholder="День события" type="text" readonly>
+		<input class="form_input_58f7bdc3" id="open-calendar-form" placeholder="День события" type="text" name="date" readonly>
 
 		@include("../form_calendar/form_calendar.html")
 	</div>
 
-	<input class="form_input_58f7bdc3" type="tel" placeholder="+7 (000) 000-00-00" aria-label="Ваш номер телефона" required>
+	<input class="form_input_58f7bdc3" type="tel" placeholder="+7 (000) 000-00-00" aria-label="Ваш номер телефона" name="phone" required>
 
 	<button class="form_button_58f7bdc3" type="submit" onclick="submitForm()" >Отправить</button>
 

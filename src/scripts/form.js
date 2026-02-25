@@ -21,3 +21,5 @@ function submitForm() {
 
 	closeForm()
 }
+
+new CalendarManager("form");

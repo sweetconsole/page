@@ -15,7 +15,5 @@ function closeVideoPopup() {
 	background.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
 
-	console.log(video)
-
 	videoPlayer.contentWindow.postMessage(JSON.stringify({type: 'player:pause',data: {}}), '*');
 }
