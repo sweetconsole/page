@@ -357,6 +357,11 @@
 	background: conic-gradient(var(--color-accent) 0, transparent 0);
 }
 
+.player_audio_58f7bdc3 {
+	display: none;
+	pointer-events: none;
+}
+
 .card_info_58f7bdc3 {
 	@media screen and (max-width: 810px) {
 		max-width: 210px;
