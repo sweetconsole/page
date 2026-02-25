@@ -738,17 +738,23 @@ for (let key = 0; key < artist_list.length; key++) {
 	audio.addEventListener('timeupdate', function() {
 		targetProgress = this.currentTime / this.duration
 
+		console.log(targetProgress)
+
 		if (!animationFrame && targetProgress !== 1) {
 			animationFrame = requestAnimationFrame(smoothAnimation)
 		}
 
 		if (targetProgress === 1) {
 			circle.set(0);
+			audiosIsPlaying[key] = false
 		}
 	});
 
 	audio.addEventListener('ended', function() {
 		circle.set(0);
+		audios[key].play()
+		audios[key].pause()
+		audiosIsPlaying[key] = false
 
 		const buttonImage = document.getElementById(`button_${key}`);
 		buttonImage.classList = "player_button_play_58f7bdc3";
@@ -953,7 +959,6 @@ function togglePlay(id) {
 
 				console.log("Two Pause")
 			} else {
-				artist_list[id].isAudioEnded = false;
 				audios[id].play();
 				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
