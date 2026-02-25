@@ -78,6 +78,7 @@ const movies_list = new Swiper('.info_list_movies_58f7bdc3', {
 const other_artist = new Swiper(".other_artists_58f7bdc3", {
 	slidesPerView: 1,
 	spaceBetween: 20,
+	allowTouchMove: false,
 	navigation: {
 		nextEl: '.info_swiper_button_next_artist_58f7bdc3',
 		prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',

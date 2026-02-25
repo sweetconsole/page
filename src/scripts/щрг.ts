@@ -1,15 +1,17 @@
 
 const artist_list = document.getElementById('other_list_artist_58f7bdc3').getElementsByClassName('card_58f7bdc3')
 
-let circles = []
 let audios = []
-let audiosIsPlaying = []
 
-for (let key = 0; key < artist_list.length; key++) {
+audios.push(new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"));
+
+for (let key = 1; key < artist_list.length +  1; key++) {
 	let currentProgress = 0
 	let targetProgress = 0
 	let animationFrame = null
 	const audio = new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3")
+
+	audios.push(audio);
 
 	let circle= new ProgressBar.Circle(`#bar_${key}`, {
 		color: '#C1492E',
@@ -22,11 +24,7 @@ for (let key = 0; key < artist_list.length; key++) {
 		},
 	});
 
-	circles.push(circle)
-	audios.push(audio)
-	audiosIsPlaying.push(false)
-
-	circles[key].set(0);
+	circle.set(0);
 
 	const gallery = new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
@@ -273,38 +271,30 @@ for (let key = 0; key < artist_list.length; key++) {
 }
 
 function togglePlay(id) {
-	for (let key = 0; key < artist_list.length; key++) {
+	for (let key = 1; key < artist_list.length +  1; key++) {
 		const buttonImage = document.getElementById(`button_${key}`);
 		const block = document.getElementById(`artist_${key}`);
 
-		if (key !== id) {
+		if (key.toString() !== id) {
 			buttonImage.classList = "player_button_play_58f7bdc3"
 			buttonImage.src = "./image/play.svg"
 			block.classList.remove("other_artist_active_58f7bdc3");
-			audios[key].pause();
-
-			console.log(key, id)
-
-			console.log("One Pause")
+			audios[id].pause();
 		} else {
-			if (audiosIsPlaying[id]) {
+			if (audios[id].isPlaying) {
 				audios[id].pause();
 				buttonImage.classList = "player_button_play_58f7bdc3"
 				buttonImage.src = "./image/play.svg"
 				block.classList.remove("other_artist_active_58f7bdc3");
-
-				console.log("Two Pause")
 			} else {
 				artist_list[id].isAudioEnded = false;
 				audios[id].play();
 				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
 				block.classList.add("other_artist_active_58f7bdc3");
-
-				console.log("Two Play")
 			}
 
-			audiosIsPlaying[id] = !audiosIsPlaying[id];
+			artist_list[id].isPlaying = !artist_list[id].isPlaying;
 		}
 	}
 }

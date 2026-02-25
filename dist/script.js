@@ -75,58 +75,6 @@ function submitForm() {
 	closeForm()
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-	const container = document.querySelector('.form_select_container');
-	const button = document.querySelector('.form_select');
-	const selectedSpan = document.querySelector('.form_select_value');
-	const customOptions = document.querySelectorAll('.form_option');
-	const hiddenSelect = document.getElementById('eventSelect');
-
-	button.addEventListener('click', function(e) {
-		e.stopPropagation();
-		container.classList.toggle('open');
-	});
-
-	customOptions.forEach(function(option) {
-		option.addEventListener('click', function() {
-			const value = this.getAttribute('data-value');
-			const text = this.textContent;
-
-			selectedSpan.textContent = text;
-			selectedSpan.classList.add('form_selected_value');
-
-			hiddenSelect.value = value;
-
-			customOptions.forEach(function(opt) {
-				opt.classList.remove('selected');
-			});
-			this.classList.add('selected');
-
-			container.classList.remove('open');
-		});
-	});
-
-	document.addEventListener('click', function(e) {
-		if (!container.contains(e.target)) {
-			container.classList.remove('open');
-		}
-	});
-
-	const defaultSelected = hiddenSelect.options[hiddenSelect.selectedIndex];
-	if (defaultSelected && defaultSelected.value) {
-		const defaultText = defaultSelected.text;
-		const defaultValue = defaultSelected.value;
-		selectedSpan.textContent = defaultText;
-
-		customOptions.forEach(function(opt) {
-			if (opt.getAttribute('data-value') === defaultValue) {
-				opt.classList.add('selected');
-			}
-		});
-	} else {
-		customOptions[0].classList.add('selected');
-	}
-});
 document.addEventListener('DOMContentLoaded', function(){
 	const dateInput = document.getElementById('dateInput');
 	const calendar = document.getElementById('calendar');
@@ -680,6 +628,7 @@ const movies_list = new Swiper('.info_list_movies_58f7bdc3', {
 const other_artist = new Swiper(".other_artists_58f7bdc3", {
 	slidesPerView: 1,
 	spaceBetween: 20,
+	allowTouchMove: false,
 	navigation: {
 		nextEl: '.info_swiper_button_next_artist_58f7bdc3',
 		prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',
@@ -708,262 +657,19 @@ function closeVideoPopup() {
 }
 
 
-const artist_list = document.getElementById('other_list_artist_58f7bdc3');
+const artist_list = document.getElementById('other_list_artist_58f7bdc3').getElementsByClassName('card_58f7bdc3')
 
-const z_artists = [
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		isAudioEnded: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 10000,
-		characters_photo: [
-			"./image/other.png",
-			"./image/other.png",
-			"./image/other.png",
-		],
-		gallery: [
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		isAudioEnded: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 10000,
-		characters_photo: [
-			"./image/other.png",
-			"./image/other.png",
-			"./image/other.png",
-		],
-		gallery: [
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		isAudioEnded: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 10000,
-		characters_photo: [
-			"./image/other.png",
-			"./image/other.png",
-			"./image/other.png",
-		],
-		gallery: [
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-		]
-	},
-	{
-		circle: null,
-		isPlaying: false,
-		isShowing: false,
-		isAudioEnded: false,
-		audio: new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3"),
-		photo: "./image/other_artist.png",
-		name: "Сергей Чонишвили",
-		price: 10000,
-		characters_photo: [
-			"./image/other.png",
-			"./image/other.png",
-			"./image/other.png",
-		],
-		gallery: [
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-			"./image/gallery.png",
-		]
-	},
-]
+let circles = []
+let audios = []
+let audiosIsPlaying = []
 
-z_artists.forEach((artist, key) => {
-	artist_list.innerHTML += `
-		<li class="swiper-slide card_58f7bdc3" id="artist_${key}">
-      <div class="bookmark_58f7bdc3">
-        <ul class="artists_58f7bdc3">
-          ${artist.characters_photo.map((character, index) => (
-						`
-							<li class="artist_58f7bdc3">
-								<img class="artist_photo" src=${character} alt="" >
-							</li>
-						`
-					)).join('')}
-        </ul>
-
-        <p class="bookmark_title_58f7bdc3">Звёздный диктор!</p>
-        <p class="bookmark_text_58f7bdc3">Федеральный диктор, актёр. Голос СТС и Вина Дизеля. Специализация: озвучка рекламы</p>
-      </div>
-        <button class="like_58f7bdc3">
-        	<img class="like_icon_hover_58f7bdc3" src="./image/like_fill.svg" alt="">
-          <img class="like_icon_58f7bdc3" src="./image/like_border.svg" alt="">
-        </button>
-
-        <div class="profile_58f7bdc3">
-          <div class="player_58f7bdc3" id="audioOnePlayer">
-            <button class="player_button_58f7bdc3" onClick="togglePlay('${key}')">
-              <img class="player_button_play_58f7bdc3" id="button_${key}" src="./image/play.svg" alt="">
-            </button>
-
-            <img class="player_photo_58f7bdc3" src=${artist.photo} alt="" >
-            <div class="player_bar_58f7bdc3" id="bar_${key}"></div>
-          </div>
-
-          <div class="card_info_58f7bdc3">
-            <div class="artist_name_58f7bdc3">
-              <a class="artist_name_text_58f7bdc3" href="#">${artist.name}</a>
-              <img class="artist_name_icon_58f7bdc3" src="./image/corona.svg" alt="" >
-            </div>
-
-            <ul class="statistics_list_58f7bdc3">
-              <li class="statistics_58f7bdc3">
-                <p class="statistics_text_58f7bdc3 stars_text_58f7bdc3">4.9</p>
-                <div class="star_icons_58f7bdc3">
-                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
-                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
-                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
-                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
-                  <img class="star_58f7bdc3" src="./image/star.svg" alt="">
-                </div>
-              </li>
-
-              <li class="statistics_58f7bdc3">
-                <img class="reviews_icon_58f7bdc3" src="./image/review.svg" alt="">
-                <p class="statistics_text_58f7bdc3">100+ отзывов</p>
-              </li>
-
-              <li class="statistics_58f7bdc3">
-                <img class="location_icon_58f7bdc3" src="./image/location.svg" alt="">
-                <p class="statistics_text_58f7bdc3">г. Москва, Санкт-Петербург</p>
-              </li>
-            </ul>
-
-            <ul class="tags_58f7bdc3">
-              <li class="tag_check_58f7bdc3">
-                <img class="tag_check_icon_58f7bdc3" src="./image/check.svg" alt="">
-              </li>
-
-              <li class="tag_58f7bdc3">
-                <img class="tag_icon_58f7bdc3" src="./image/rings.svg" alt="">
-                <p class="tag_title_58f7bdc3">Свадьба</p>
-              </li>
-              <li class="tag_58f7bdc3">
-                <img class="tag_icon_58f7bdc3" src="./image/confetti.svg" alt="">
-                <p class="tag_title_58f7bdc3">Корпоратив</p>
-              </li>
-              <li class="tag_58f7bdc3">
-                <img class="tag_icon_58f7bdc3" src="./image/ball.svg" alt="">
-                <p class="tag_title_58f7bdc3">Вечеринка</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="swiper gallery_58f7bdc3 gallery_${key}_58f7bdc3">
-          <ul class="swiper-wrapper">
-          	${artist.gallery.map((item, index) => (
-							`
-								<li class="swiper-slide gallery_item_58f7bdc3" onclick="openVideoPopup('https://rutube.ru/play/embed/396c102de740d5cfc6ebc42b2616667d')">
-		              <img class="gallery_image_58f7bdc3" src=${item} alt="">
-		
-		              <button class="gallery_button_58f7bdc3">
-		                <img class="gallery_button_icon_58f7bdc3" src="./image/play.svg" alt="">
-		              </button>
-		            </li>
-							`
-						)).join('')}
-          </ul>
-        </div>
-
-        <div class="card_footer_58f7bdc3">
-          <div class="card_price_58f7bdc3">
-            <img class="card_price_icon_58f7bdc3" src="./image/price.svg" alt="">
-            <p class="card_price_text_desktop_58f7bdc3">
-            	 Цена от 
-            	<span class="card_price_text_bold_58f7bdc3">${artist.price} ₽</span>
-            </p>
-            <p class="card_price_text_mobile_58f7bdc3">
-            	 От 
-            	<span class="card_price_text_bold_58f7bdc3">${artist.price}₽</span>
-            </p>
-          </div>
-
-          <div class="card_menu_58f7bdc3">
-            <button class="card_button_58f7bdc3 card_button_border_58f7bdc3" id="openCalendar-${key}">Проверить дату</button>
-            <button class="card_button_58f7bdc3 card_button_full_58f7bdc3" onclick="openForm()">Заказать</button>
-          </div>
-        </div>
-        
-        <div class="calendar card_calendar" id="calendar-${key}">
-\t<div class="calendar-header">
-\t\t<button class="nav-btn prev-month-${key}" title="Предыдущий месяц">
-\t\t\t<img src="./image/arrow_left.svg" alt="<">
-\t\t</button>
-
-\t\t<div class="month-year-selector">
-\t\t\t<select class="month-select" id="monthSelect-${key}"></select>
-\t\t\t<select class="year-select" id="yearSelect-${key}"></select>
-\t\t</div>
-
-\t\t<button class="nav-btn next-month-${key}" title="Следующий месяц">
-\t\t\t<img src="./image/arrow_right.svg" alt=">">
-\t\t</button>
-\t</div>
-
-\t<div class="weekdays">
-\t\t<div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
-\t\t<div>Пт</div><div>Сб</div><div>Вс</div>
-\t</div>
-
-\t<div class="days" id="calendarDays-${key}"></div>
-</div>
-      </li>
-	`
-})
-
-z_artists.forEach((artist, key) => {
+for (let key = 0; key < artist_list.length; key++) {
 	let currentProgress = 0
 	let targetProgress = 0
 	let animationFrame = null
-	const audio = artist.audio
+	const audio = new Audio("https://storage.kupigolos.ru/audio/demo/5881cd5a01f49.mp3")
 
-	artist.circle = new ProgressBar.Circle(`#bar_${key}`, {
+	let circle= new ProgressBar.Circle(`#bar_${key}`, {
 		color: '#C1492E',
 		strokeWidth: 5,
 		trailWidth: 5,
@@ -974,7 +680,11 @@ z_artists.forEach((artist, key) => {
 		},
 	});
 
-	artist.circle.set(0);
+	circles.push(circle)
+	audios.push(audio)
+	audiosIsPlaying.push(false)
+
+	circles[key].set(0);
 
 	const gallery = new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
@@ -1003,7 +713,7 @@ z_artists.forEach((artist, key) => {
 		const progress = angle / (2 * Math.PI);
 
 		audio.currentTime = progress * audio.duration;
-		artist.circle.set(progress);
+		circle.set(progress);
 	});
 
 	function smoothAnimation() {
@@ -1012,7 +722,7 @@ z_artists.forEach((artist, key) => {
 
 		currentProgress += diff * smoothFactor
 
-		artist.circle.animate(currentProgress, {
+		circle.animate(currentProgress, {
 			duration: 50,
 			easing: 'linear'
 		})
@@ -1020,12 +730,12 @@ z_artists.forEach((artist, key) => {
 		if (Math.abs(diff) > 0.001) {
 			animationFrame = requestAnimationFrame(smoothAnimation)
 		} else {
-			artist.circle.set(targetProgress)
+			circle.set(targetProgress)
 			animationFrame = null
 		}
 	}
 
-	artist.audio.addEventListener('timeupdate', function() {
+	audio.addEventListener('timeupdate', function() {
 		targetProgress = this.currentTime / this.duration
 
 		if (!animationFrame && targetProgress !== 1) {
@@ -1033,19 +743,16 @@ z_artists.forEach((artist, key) => {
 		}
 
 		if (targetProgress === 1) {
-			artist.circle.set(0);
+			circle.set(0);
 		}
 	});
 
-	artist.audio.addEventListener('ended', function() {
-		artist.circle.set(0);
+	audio.addEventListener('ended', function() {
+		circle.set(0);
 
 		const buttonImage = document.getElementById(`button_${key}`);
 		buttonImage.classList = "player_button_play_58f7bdc3";
 		buttonImage.src = "./image/play.svg"
-
-		artist.isPlaying = false;
-		artist.isAudioEnded = true;
 	});
 
 	document.addEventListener('DOMContentLoaded', function(){
@@ -1057,25 +764,23 @@ z_artists.forEach((artist, key) => {
 		const prevMonthBtn = document.querySelector(`.prev-month-${key}`);
 		const nextMonthBtn = document.querySelector(`.next-month-${key}`);
 
+		console.log(dateInput, calendarDays, monthSelect, yearSelect, prevMonthBtn);
+
 		let currentDate = new Date();
 		let selectedDate = null;
 
-		// Названия месяцев
 		const monthNames = [
 			'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
 			'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 		];
 
-		// Короткие названия месяцев
 		const monthNamesShort = [
 			'Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
 			'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'
 		];
 
-		// Дни недели
 		const weekDays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
-		// Форматирование даты
 		function formatDate(date) {
 			if (!date) return '';
 			const day = date.getDate().toString().padStart(2, '0');
@@ -1084,7 +789,6 @@ z_artists.forEach((artist, key) => {
 			return `${day}.${month}.${year}`;
 		}
 
-		// Показать/скрыть календарь
 		dateInput.addEventListener('click', (e) => {
 			calendar.classList.toggle('show');
 			e.stopPropagation();
@@ -1092,16 +796,13 @@ z_artists.forEach((artist, key) => {
 			renderCalendar();
 		});
 
-		// Закрыть календарь при клике вне его
 		document.addEventListener('click', (e) => {
 			if (!calendar.contains(e.target) && e.target !== dateInput) {
 				calendar.classList.remove('show');
 			}
 		});
 
-		// Заполнение выпадающих списков
 		function populateSelectors() {
-			// Заполнение месяцев
 			monthSelect.innerHTML = '';
 			monthNames.forEach((month, index) => {
 				const option = document.createElement('option');
@@ -1110,7 +811,6 @@ z_artists.forEach((artist, key) => {
 				monthSelect.appendChild(option);
 			});
 
-			// Заполнение годов (от -10 до +10 лет от текущего)
 			yearSelect.innerHTML = '';
 			const currentYear = new Date().getFullYear();
 			for (let year = currentYear; year <= currentYear + 2; year++) {
@@ -1121,13 +821,11 @@ z_artists.forEach((artist, key) => {
 			}
 		}
 
-		// Обновление выбранных значений в селекторах
 		function updateSelectors() {
 			monthSelect.value = currentDate.getMonth();
 			yearSelect.value = currentDate.getFullYear();
 		}
 
-		// Обработчики изменения селекторов
 		monthSelect.addEventListener('change', () => {
 			currentDate.setMonth(parseInt(monthSelect.value));
 			renderCalendar();
@@ -1138,7 +836,6 @@ z_artists.forEach((artist, key) => {
 			renderCalendar();
 		});
 
-		// Навигация
 		prevMonthBtn.addEventListener('click', () => {
 			currentDate.setMonth(currentDate.getMonth() - 1);
 			updateSelectors();
@@ -1151,29 +848,22 @@ z_artists.forEach((artist, key) => {
 			renderCalendar();
 		});
 
-		// Отрисовка календаря
 		function renderCalendar() {
 			const year = currentDate.getFullYear();
 			const month = currentDate.getMonth();
 
-			// Первый день месяца
 			const firstDay = new Date(year, month, 1);
-			// Последний день месяца
 			const lastDay = new Date(year, month + 1, 0);
-			// День недели первого дня (0 - воскресенье, 1 - понедельник и т.д.)
 			const firstDayIndex = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
-			// Последний день предыдущего месяца
 			const prevLastDay = new Date(year, month, 0).getDate();
 
 			calendarDays.innerHTML = '';
 
-			// Дни предыдущего месяца
 			for (let i = firstDayIndex; i > 0; i--) {
 				const day = document.createElement('div');
 				day.classList.add('day', 'other-month');
 				day.textContent = prevLastDay - i + 1;
 
-				// Отметка выходных для предыдущего месяца
 				const date = new Date(year, month - 1, prevLastDay - i + 1);
 				if (date.getDay() === 0 || date.getDay() === 6) {
 					day.classList.add('weekend');
@@ -1182,7 +872,6 @@ z_artists.forEach((artist, key) => {
 				calendarDays.appendChild(day);
 			}
 
-			// Дни текущего месяца
 			for (let i = 1; i <= lastDay.getDate(); i++) {
 				const day = document.createElement('div');
 				day.classList.add('day');
@@ -1190,18 +879,15 @@ z_artists.forEach((artist, key) => {
 
 				const date = new Date(year, month, i);
 
-				// Отметить выходные
 				if (date.getDay() === 0 || date.getDay() === 6) {
 					day.classList.add('weekend');
 				}
 
-				// Отметить сегодняшний день
 				const today = new Date();
 				if (date.toDateString() === today.toDateString()) {
 					day.classList.add('today');
 				}
 
-				// Отметить выбранный день
 				if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
 					day.classList.add('selected');
 				}
@@ -1215,8 +901,7 @@ z_artists.forEach((artist, key) => {
 				calendarDays.appendChild(day);
 			}
 
-			// Дни следующего месяца
-			const totalCells = 42; // 6 недель
+			const totalCells = 42;
 			const nextDays = totalCells - (firstDayIndex + lastDay.getDate());
 
 			for (let i = 1; i <= nextDays; i++) {
@@ -1224,7 +909,6 @@ z_artists.forEach((artist, key) => {
 				day.classList.add('day', 'other-month');
 				day.textContent = i;
 
-				// Отметка выходных для следующего месяца
 				const date = new Date(year, month + 1, i);
 				if (date.getDay() === 0 || date.getDay() === 6) {
 					day.classList.add('weekend');
@@ -1234,46 +918,51 @@ z_artists.forEach((artist, key) => {
 			}
 		}
 
-		// Инициализация
 		populateSelectors();
 		updateSelectors();
 		renderCalendar();
 
-		// Закрытие календаря по клавише Esc
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'Escape' && calendar.classList.contains('show')) {
 				calendar.classList.remove('show');
 			}
 		});
 	});
-})
+}
 
 function togglePlay(id) {
-	z_artists.forEach((artist, key) => {
+	for (let key = 0; key < artist_list.length; key++) {
 		const buttonImage = document.getElementById(`button_${key}`);
 		const block = document.getElementById(`artist_${key}`);
 
-		if (key.toString() !== id) {
+		if (key !== id) {
 			buttonImage.classList = "player_button_play_58f7bdc3"
 			buttonImage.src = "./image/play.svg"
 			block.classList.remove("other_artist_active_58f7bdc3");
-			artist.isPlaying = false;
-			artist.audio.pause();
+			audios[key].pause();
+
+			console.log(key, id)
+
+			console.log("One Pause")
 		} else {
-			if (z_artists[id].isPlaying) {
-				z_artists[id].audio.pause();
+			if (audiosIsPlaying[id]) {
+				audios[id].pause();
 				buttonImage.classList = "player_button_play_58f7bdc3"
 				buttonImage.src = "./image/play.svg"
 				block.classList.remove("other_artist_active_58f7bdc3");
+
+				console.log("Two Pause")
 			} else {
-				z_artists[id].isAudioEnded = false;
-				z_artists[id].audio.play();
+				artist_list[id].isAudioEnded = false;
+				audios[id].play();
 				buttonImage.classList = "player_button_pause_58f7bdc3"
 				buttonImage.src = "./image/pause.png"
 				block.classList.add("other_artist_active_58f7bdc3");
+
+				console.log("Two Play")
 			}
 
-			z_artists[id].isPlaying = !z_artists[id].isPlaying;
+			audiosIsPlaying[id] = !audiosIsPlaying[id];
 		}
-	})
+	}
 }
