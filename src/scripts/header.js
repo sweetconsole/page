@@ -6,13 +6,13 @@ const menu_link_4 = document.getElementById("menu_link_4");
 let isViewMenuLinks = false;
 let currentMenuLink = null;
 
-const header = document.getElementById("header_58f7bdc3");
+const header_58f7bdc3 = document.getElementById("header_58f7bdc3");
 
 window.addEventListener("scroll", () => {
 	if (window.pageYOffset >= 115) {
-		header.classList.add("header_active_58f7bdc3");
+		header_58f7bdc3.classList.add("header_active_58f7bdc3");
 	} else {
-		header.classList.remove("header_active_58f7bdc3");
+		header_58f7bdc3.classList.remove("header_active_58f7bdc3");
 	}
 })
 

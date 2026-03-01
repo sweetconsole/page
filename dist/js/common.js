@@ -1,6 +1,6 @@
-const background = document.getElementById("background_58f7bdc3")
+const background_58f7bdc3 = document.getElementById("background_58f7bdc3")
 
-background.addEventListener("click", function () {
+background_58f7bdc3.addEventListener("click", function () {
 	closeForm()
 	closeVideoPopup()
 	closeMenuForm()
@@ -248,13 +248,13 @@ let isView = true
 
 function openForm() {
 	popup.classList.add("form_58f7bdc3_active")
-	background.classList.add("background_58f7bdc3_active")
+	background_58f7bdc3.classList.add("background_58f7bdc3_active")
 	body.style.overflow = "hidden"
 }
 
 function closeForm() {
 	popup.classList.remove("form_58f7bdc3_active")
-	background.classList.remove("background_58f7bdc3_active")
+	background_58f7bdc3.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
 }
 
@@ -273,13 +273,13 @@ const menu_link_4 = document.getElementById("menu_link_4");
 let isViewMenuLinks = false;
 let currentMenuLink = null;
 
-const header = document.getElementById("header_58f7bdc3");
+const header_58f7bdc3 = document.getElementById("header_58f7bdc3");
 
 window.addEventListener("scroll", () => {
 	if (window.pageYOffset >= 115) {
-		header.classList.add("header_active_58f7bdc3");
+		header_58f7bdc3.classList.add("header_active_58f7bdc3");
 	} else {
-		header.classList.remove("header_active_58f7bdc3");
+		header_58f7bdc3.classList.remove("header_active_58f7bdc3");
 	}
 })
 
@@ -325,13 +325,13 @@ const menuForm = document.getElementById("menu_form_58f7bdc3")
 
 function openMenuForm() {
 	menuForm.classList.add("form_58f7bdc3_active")
-	background.classList.add("background_58f7bdc3_active")
+	background_58f7bdc3.classList.add("background_58f7bdc3_active")
 	body.style.overflow = "hidden"
 }
 
 function closeMenuForm() {
 	menuForm.classList.remove("form_58f7bdc3_active")
-	background.classList.remove("background_58f7bdc3_active")
+	background_58f7bdc3.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
 }
 
@@ -415,7 +415,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_pause_58f7bdc3";
-			buttonImage.src = "./image/pause.png";
+			buttonImage.src = "./img/pause.png";
 		}
 		const block = document.getElementById(`artist_${this.key}`);
 		if (block) {
@@ -427,7 +427,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_play_58f7bdc3";
-			buttonImage.src = "./image/play.svg";
+			buttonImage.src = "./img/play.svg";
 		}
 		const block = document.getElementById(`artist_${this.key}`);
 		if (block) {
@@ -461,7 +461,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_play_58f7bdc3";
-			buttonImage.src = "./image/play.svg";
+			buttonImage.src = "./img/play.svg";
 		}
 
 		const block = document.getElementById(`artist_${this.key}`);
@@ -684,7 +684,7 @@ const videoPlayer= document.getElementById("video_player_src_58f7bdc3")
 
 function openVideoPopup(url) {
 	videoPopup.classList.add("video_player_58f7bdc3_active")
-	background.classList.add("background_58f7bdc3_active")
+	background_58f7bdc3.classList.add("background_58f7bdc3_active")
 	videoPlayer.src = url
 	body.style.overflow = "hidden"
 }
@@ -693,7 +693,7 @@ function closeVideoPopup() {
 	const video = videoPlayer.getElementsByTagName("video")[0];
 
 	videoPopup.classList.remove("video_player_58f7bdc3_active")
-	background.classList.remove("background_58f7bdc3_active")
+	background_58f7bdc3.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
 
 	videoPlayer.contentWindow.postMessage(JSON.stringify({type: 'player:pause',data: {}}), '*');

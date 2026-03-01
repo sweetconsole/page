@@ -135,7 +135,7 @@
 	position: absolute;
 	top: 0;
 	right: 114px;
-	background-image: url("./image/bookmark.svg");
+	background-image: url("../img/bookmark.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -508,6 +508,10 @@
 	color: white;
 }
 
+.tag_58f7bdc3:hover p {
+	color: white;
+}
+
 .tag_icon_58f7bdc3 {
 	width: 21px;
 	height: 21px;
@@ -518,6 +522,7 @@
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 700;
+	color: #C1492E;
 }
 
 .gallery_58f7bdc3 {

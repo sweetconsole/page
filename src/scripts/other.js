@@ -73,7 +73,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_pause_58f7bdc3";
-			buttonImage.src = "./image/pause.png";
+			buttonImage.src = "./img/pause.png";
 		}
 		const block = document.getElementById(`artist_${this.key}`);
 		if (block) {
@@ -85,7 +85,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_play_58f7bdc3";
-			buttonImage.src = "./image/play.svg";
+			buttonImage.src = "./img/play.svg";
 		}
 		const block = document.getElementById(`artist_${this.key}`);
 		if (block) {
@@ -119,7 +119,7 @@ class AudioPlayer {
 		const buttonImage = document.getElementById(`button_${this.key}`);
 		if (buttonImage) {
 			buttonImage.classList = "player_button_play_58f7bdc3";
-			buttonImage.src = "./image/play.svg";
+			buttonImage.src = "./img/play.svg";
 		}
 
 		const block = document.getElementById(`artist_${this.key}`);

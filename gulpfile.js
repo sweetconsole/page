@@ -14,17 +14,17 @@ const paths = {
     },
     styles: {
         src: "src/components/**/*.css",
-        dest: "dist/"
+        dest: "dist/css/"
     },
     scripts: {
         src: "src/scripts/**/*.js",
-        dest: "dist/"
+        dest: "dist/js/"
     },
     images: {
         src: ["src/image/**/*", "!src/image/**/*.svg"],
         svg: "src/image/**/*.svg",
         webp: "src/image/**/*.{png, jpg, jpeg}",
-        dest: "dist/image/"
+        dest: "dist/img/"
     },
     nothing: {
         src: ["src/video/**/*", "src/audio/**/*"],
@@ -59,7 +59,7 @@ function styles() {
 
 function scripts() {
     return gulp.src(paths.scripts.src)
-        .pipe(concat('script.js'))
+        .pipe(concat('common.js'))
         .pipe(gulp.dest(paths.scripts.dest))
         .pipe(browserSync.stream())
 }

@@ -6,13 +6,13 @@ let isView = true
 
 function openForm() {
 	popup.classList.add("form_58f7bdc3_active")
-	background.classList.add("background_58f7bdc3_active")
+	background_58f7bdc3.classList.add("background_58f7bdc3_active")
 	body.style.overflow = "hidden"
 }
 
 function closeForm() {
 	popup.classList.remove("form_58f7bdc3_active")
-	background.classList.remove("background_58f7bdc3_active")
+	background_58f7bdc3.classList.remove("background_58f7bdc3_active")
 	body.style.overflow = "auto"
 }
 
