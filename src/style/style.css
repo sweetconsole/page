@@ -13,6 +13,7 @@ body {
     font-weight: 400;
     position: relative;
     overflow-x: hidden;
+    margin-top: 200px;
 }
 
 a,
@@ -32,11 +33,12 @@ button {
 
 .content_container_58f7bdc3 {
     display: grid;
-    gap: 50px;
+    justify-content: space-between;
     grid-template-columns: 330px 900px;
     
     @media screen and (max-width: 1280px) {
         display: flex;
+        gap: 50px;
         flex-direction: column;
     }
 }
@@ -47,7 +49,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 90;
+    z-index: 250;
     pointer-events: none;
     background-color: black;
     opacity: 0.8;

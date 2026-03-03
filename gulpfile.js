@@ -49,10 +49,10 @@ function html() {
 function styles() {
     return gulp.src(["src/style/**.css", paths.styles.src])
         .pipe(concat('style.css'))
-        .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
-        grid: true
-        }))
+        // .pipe(autoprefixer({
+        //     overrideBrowserslist: ['last 10 version'],
+        //     grid: true
+        // }))
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream())
 }

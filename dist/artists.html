@@ -35,6 +35,9 @@
 				<li class="menu_header_network_58f7bdc3">
 					<img class="menu_header_network_icon_58f7bdc3" src="./img/whatsapp.svg" alt="">
 				</li>
+				<li class="menu_header_network_58f7bdc3">
+					<img class="menu_header_network_icon_58f7bdc3" src="./img/max.svg" alt="">
+				</li>
 			</ul>
 		</header>
 
@@ -174,19 +177,16 @@
 		</ul>
 
 		<div class="menu_banner_2_58f7bdc3">
-			<p class="menu_banner_2_title_58f7bdc3">Хотите безопасно обменивать большие суммы?</p>
-
-			<ul class="menu_banner_2_list_58f7bdc3">
-				<li class="menu_banner_2_list_item_58f7bdc3">– Персональный менеджер</li>
-				<li class="menu_banner_2_list_item_58f7bdc3">– Объем ликвидности</li>
-				<li class="menu_banner_2_list_item_58f7bdc3">– Обмен от 70 000</li>
-				<li class="menu_banner_2_list_item_58f7bdc3">– Premium lounge</li>
-			</ul>
+			<div class="menu_banner_2_content">
+				<p class="menu_banner_2_title_58f7bdc3">Вы диктор?</p>
+				<p class="menu_banner_2_text_58f7bdc3">Заполните анкету, чтобы попасть в рейтинг</p>
+				<button class="menu_banner_2_button_58f7bdc3" onclick="openMenuForm()">Заполнить анкету</button>
+			</div>
 
 			<img class="menu_banner_2_logo_58f7bdc3" src="./img/logo_banner_mobile.svg" alt="">
 		</div>
 
-		<button class="menu_button_58f7bdc3">Быстрый заказ</button>
+		<button class="menu_button_58f7bdc3" onclick="openForm()">Быстрый заказ</button>
 
 		<div class="menu_phone_58f7bdc3">
 			<p class="menu_phone_number_58f7bdc3">8 800 200-45-51</p>
@@ -202,28 +202,49 @@
 	<div class="form_input_date_58f7bdc3">
 		<input class="form_input_58f7bdc3" id="open-calendar-form" placeholder="День события" type="text" name="date" readonly>
 
-		<div class="calendar" id="calendar-form">
-	<div class="calendar-header">
-		<button class="nav-btn" id="prev-month-form" title="Предыдущий месяц">
-			<img src="./img/arrow_left.svg" alt="<">
-		</button>
-
-		<div class="month-year-selector">
-			<select class="month-select" id="month-select-form"></select>
-			<select class="year-select" id="year-select-form"></select>
-		</div>
-
-		<button class="nav-btn" id="next-month-form" title="Следующий месяц">
-			<img src="./img/arrow_right.svg" alt=">">
-		</button>
+		<div class="header_navigation_footer">
+	<div class="header_navigation_footer_banner">
+		<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
+		<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
 	</div>
 
-	<div class="weekdays">
-		<div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
-		<div>Пт</div><div>Сб</div><div>Вс</div>
-	</div>
+	<ul class="header_navigation_footer_networks">
+		<li class="header_navigation_footer_network">
+			<a href="#">
+				<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
+				<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
+			</a>
+		</li>
+		<li class="header_navigation_footer_network">
+			<a href="#">
+				<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
+				<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
+			</a>
+		</li>
+		<li class="header_navigation_footer_network">
+			<a href="#">
+				<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
+				<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
+			</a>
+		</li>
+		<li class="header_navigation_footer_network">
+			<a href="#">
+				<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
+				<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
+			</a>
+		</li><li class="header_navigation_footer_network">
+		<a href="#">
+			<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
+			<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
+		</a>
+	</li>
 
-	<div class="days" id="calendar-days-form"></div>
+	</ul>
+</div>
+
+<div class="footer_phone">
+	<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
+	<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
 </div>
 	</div>
 
@@ -254,179 +275,135 @@
 	></iframe>
 </div>
 
-	
-<header class="header_58f7bdc3">
+	<header class="header header_58f7bdc3" id="header_58f7bdc3">
 	<div class="container_58f7bdc3 header_container_58f7bdc3">
-		<div class="header_top_58f7bdc3">
-			<nav class="header_top_navigation_58f7bdc3">
-				<a class="header_top_navigation_link_58f7bdc3" href="#">Цены</a>
-				<a class="header_top_navigation_link_58f7bdc3" href="#">Оплата</a>
-				<a class="header_top_navigation_link_58f7bdc3" href="#">FAQ</a>
-				<a class="header_top_navigation_link_58f7bdc3" href="#">О студии</a>
-				<a class="header_top_navigation_link_58f7bdc3" href="#">Контакты</a>
-			</nav>
-
-			<div class="header_left_block_58f7bdc3">
-				<div class="header_socials_58f7bdc3">
-					<a class="header_socials_link_58f7bdc3 header_socials_link_email_58f7bdc3" href="#">info@kupigolos.ru</a>
-					<a class="header_socials_link_58f7bdc3" href="#">
-						<img class="header_socials_link_icon_58f7bdc3" src="./img/telegram.svg" alt="Telegram" >
-						<img class="header_socials_link_icon_hover_58f7bdc3" src="./img/telegram_hover.svg" alt="Telegram" >
-					</a>
-					<a class="header_socials_link_58f7bdc3" href="#">
-						<img class="header_socials_link_icon_hover_58f7bdc3" src="./img/whatsapp_hover.svg" alt="Telegram" >
-						<img class="header_socials_link_icon_58f7bdc3" src="./img/whatsapp.svg" alt="WhatsApp">
-					</a>
-				</div>
-
-				<div class="user_58f7bdc3">
-					<div class="user_buttons_58f7bdc3">
-						<img class="user_favourite_icon_hover_58f7bdc3" src="./img/like_hover.svg" alt="">
-						<img class="user_favourite_icon_58f7bdc3" src="./img/like.svg" alt="Like">
-
-						<div class="user_help_58f7bdc3">?</div>
-					</div>
-					<div class="user_buttons_58f7bdc3">
-						<img class="user_profile_icon_hover_58f7bdc3" src="./img/profile_hover.svg" alt="">
-						<img class="user_profile_icon_58f7bdc3" src="./img/profile.svg" alt="Profile">
-
-						<div class="user_help_58f7bdc3">?</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<header class="header_58f7bdc3 header_bottom_58f7bdc3" id="header_58f7bdc3">
-	<div class="container_58f7bdc3 header_container_58f7bdc3">
-		<div class="header_bottom_block_58f7bdc3">
-			<a class="header_bottom_logo_58f7bdc3" href="#">
-				<img class="header_bottom_logo_image_58f7bdc3" src="./img/logo.svg" alt="КупиГолос">
+		<div class="header_block_58f7bdc3">
+			<a class="header_logo_58f7bdc3" href="#">
+				<img class="header_logo_image_58f7bdc3" src="./img/logo.svg" alt="КупиГолос">
 			</a>
 
-			<div class="header_bottom_menu">
-				<div class="header_bottom_menu_chapter" onclick="toggle('menu_link_1')">
-					<p class="header_bottom_menu_title">Услуги</p>
+			<div class="header_menu">
+				<div class="header_menu_chapter">
+					<p class="header_menu_title">Услуги</p>
 
-					<div class="header_bottom_navigation_block" id="menu_link_1">
-						<div class="header_bottom_navigation_content">
-							<nav class="header_bottom_navigation_links">
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">Озвучка видео</p>
+					<div class="header_navigation_block" id="menu_link_1">
+						<div class="header_navigation_content">
+							<nav class="header_navigation_links">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">Озвучка видео</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Фильмов и сериалов
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Мультфильмов
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													YouTube каналов
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Видеорекламы
 												</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">
 											Работа с аудио
 										</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Озвучка игр</a>
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Озвучка игр</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Озвучка рекламы</a>
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Озвучка рекламы</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Запись аудиогидов</a>
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Запись аудиогидов</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Запись аудиокниг</a>
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Запись аудиокниг</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Рекламные аудиоролики</a>
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Рекламные аудиоролики</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">Голосовые приветствия</a>
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">Голосовые приветствия</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">
 											Работа с текстом
 										</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Перевод и укладка
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Сценарии аудиороликов
 												</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">
 											Локализация и перевод
 										</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Перевод видео
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Перевод игр
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Перевод фильмов и сериалов
 												</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">
 											Другие услуги
 										</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Озвучка презентаций / слайдов
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Озвучка обучающих материалов
 												</a>
 											</li>
@@ -435,261 +412,402 @@
 								</ul>
 							</nav>
 
-							<div class="header_bottom_navigation_footer">
-								<div class="header_bottom_navigation_footer_banner">
-									<img class="header_bottom_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
-									<p class="header_bottom_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
+							<div class="header_navigation_footer">
+								<div class="header_navigation_footer_banner">
+									<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
+									<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
 								</div>
 
-								<ul class="header_bottom_navigation_footer_networks">
-									<li class="header_bottom_navigation_footer_network">
+								<ul class="header_navigation_footer_networks">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
 										</a>
 									</li>
+									<li class="header_navigation_footer_network">
+										<a href="#">
+											<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
+										</a>
+									</li><li class="header_navigation_footer_network">
+									<a href="#">
+										<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
+										<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
+									</a>
+								</li>
+
 								</ul>
+							</div>
+
+							<div class="footer_phone">
+								<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
+								<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
 							</div>
 						</div>
 
-						<div class="header_bottom_navigation_info">
-							<p class="header_bottom_navigation_info_title">Вы диктор?</p>
-							<p class="header_bottom_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
+						<div class="header_navigation_info">
+							<p class="header_navigation_info_title">Вы диктор или ведущий?</p>
+							<p class="header_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
 
-							<button class="header_bottom_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
+							<button class="header_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
 
-							<img class="header_bottom_navigation_info_image" src="./img/logo_info.svg" alt="">
+							<img class="header_navigation_info_image" src="./img/logo_info.svg" alt="">
 						</div>
 					</div>
 				</div>
 
-				<div class="header_bottom_menu_chapter" onclick="toggle('menu_link_2')">
-					<p class="header_bottom_menu_title">Дикторы</p>
+				<div class="header_menu_chapter">
+					<p class="header_menu_title">Дикторы</p>
 
-					<div class="header_bottom_navigation_block" id="menu_link_2">
-						<div class="header_bottom_navigation_content">
-							<nav class="header_bottom_navigation_links">
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3">Все дикторы</a>
+					<div class="header_navigation_block" id="menu_link_2">
+						<div class="header_navigation_content">
+							<nav class="header_navigation_links">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3">Все дикторы</a>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3">Актеры озвучки</a>
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3">Актеры озвучки</a>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3">Иностранные дикторы</a>
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3">Иностранные дикторы</a>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<p class="header_bottom_navigation_link_chapter_title">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<p class="header_navigation_link_chapter_title">
 											Русские дикторы
 										</p>
 
-										<ul class="header_bottom_navigation_links_chapter_list">
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+										<ul class="header_navigation_links_chapter_list">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Федеральные
 												</a>
 											</li>
-											<li class="header_bottom_navigation_links_chapter_item">
-												<a class="header_bottom_navigation_links_chapter_link" href="#">
+											<li class="header_navigation_links_chapter_item">
+												<a class="header_navigation_links_chapter_link" href="#">
 													Региональные
 												</a>
 											</li>
 										</ul>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3">Другие услуги</a>
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3">Другие услуги</a>
 									</li>
 								</ul>
 							</nav>
 
-							<div class="header_bottom_navigation_footer">
-								<div class="header_bottom_navigation_footer_banner">
-									<img class="header_bottom_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
-									<p class="header_bottom_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
+							<div class="header_navigation_footer">
+								<div class="header_navigation_footer_banner">
+									<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
+									<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
 								</div>
 
-								<ul class="header_bottom_navigation_footer_networks">
-									<li class="header_bottom_navigation_footer_network">
+								<ul class="header_navigation_footer_networks">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
 										</a>
 									</li>
+									<li class="header_navigation_footer_network">
+										<a href="#">
+											<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
+										</a>
+									</li><li class="header_navigation_footer_network">
+									<a href="#">
+										<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
+										<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
+									</a>
+								</li>
+
 								</ul>
+							</div>
+
+							<div class="footer_phone">
+								<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
+								<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
 							</div>
 						</div>
 
-						<div class="header_bottom_navigation_info">
-							<p class="header_bottom_navigation_info_title">Вы диктор?</p>
-							<p class="header_bottom_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
+						<div class="header_navigation_info">
+							<p class="header_navigation_info_title">Вы диктор или ведущий?</p>
+							<p class="header_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
 
-							<button class="header_bottom_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
+							<button class="header_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
 
-							<img class="header_bottom_navigation_info_image" src="./img/logo_info.svg" alt="">
+							<img class="header_navigation_info_image" src="./img/logo_info.svg" alt="">
 						</div>
 					</div>
 				</div>
 
-				<div class="header_bottom_menu_chapter" onclick="toggle('menu_link_3')">
-					<p class="header_bottom_menu_title">Рейтинги</p>
+				<div class="header_menu_chapter">
+					<p class="header_menu_title">Рейтинги</p>
 
-					<div class="header_bottom_navigation_block" id="menu_link_3">
-						<div class="header_bottom_navigation_content">
-							<nav class="header_bottom_navigation_links">
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3" href="#">Ведущие</a>
+					<div class="header_navigation_block" id="menu_link_3">
+						<div class="header_navigation_content">
+							<nav class="header_navigation_links">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3" href="#">Ведущие</a>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3" href="#">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3" href="#">
 											Преподаватели музыки
 										</a>
 									</li>
 								</ul>
 							</nav>
 
-							<div class="header_bottom_navigation_footer">
-								<div class="header_bottom_navigation_footer_banner">
-									<img class="header_bottom_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
-									<p class="header_bottom_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
+							<div class="header_navigation_footer">
+								<div class="header_navigation_footer_banner">
+									<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
+									<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
 								</div>
 
-								<ul class="header_bottom_navigation_footer_networks">
-									<li class="header_bottom_navigation_footer_network">
+								<ul class="header_navigation_footer_networks">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
 										</a>
 									</li>
+									<li class="header_navigation_footer_network">
+										<a href="#">
+											<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
+										</a>
+									</li><li class="header_navigation_footer_network">
+									<a href="#">
+										<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
+										<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
+									</a>
+								</li>
+
 								</ul>
+							</div>
+
+							<div class="footer_phone">
+								<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
+								<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
 							</div>
 						</div>
 
-						<div class="header_bottom_navigation_info">
-							<p class="header_bottom_navigation_info_title">Вы ведущий?</p>
-							<p class="header_bottom_navigation_info_text">Заполните анкету, чтобы попасть в каталог</p>
+						<div class="header_navigation_info">
+							<p class="header_navigation_info_title">Вы диктор или ведущий?</p>
+							<p class="header_navigation_info_text">Заполните анкету, чтобы попасть в каталог</p>
 
-							<button class="header_bottom_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
+							<button class="header_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
 
-							<img class="header_bottom_navigation_info_image" src="./img/logo_info.svg" alt="">
+							<img class="header_navigation_info_image" src="./img/logo_info.svg" alt="">
 						</div>
 					</div>
 				</div>
 
-				<div class="header_bottom_menu_chapter" onclick="toggle('menu_link_4')">
-					<p class="header_bottom_menu_title">Инфопортал</p>
+				<div class="header_menu_chapter">
+					<p class="header_menu_title">Инфопортал</p>
 
-					<div class="header_bottom_navigation_block" id="menu_link_4">
-						<div class="header_bottom_navigation_content">
-							<nav class="header_bottom_navigation_links">
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3" href="#">Инфопортал</a>
+					<div class="header_navigation_block" id="menu_link_4">
+						<div class="header_navigation_content">
+							<nav class="header_navigation_links">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3" href="#">Инфопортал</a>
 									</li>
 								</ul>
-								<ul class="header_bottom_navigation_links_chapters">
-									<li class="header_bottom_navigation_link_chapter">
-										<a class="header_bottom_navigation_link_chapter_title header_bottom_menu_link_58f7bdc3" href="#">
+								<ul class="header_navigation_links_chapters">
+									<li class="header_navigation_link_chapter">
+										<a class="header_navigation_link_chapter_title header_menu_link_58f7bdc3" href="#">
 											Статьи
 										</a>
 									</li>
 								</ul>
 							</nav>
 
-							<div class="header_bottom_navigation_footer">
-								<div class="header_bottom_navigation_footer_banner">
-									<img class="header_bottom_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
-									<p class="header_bottom_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
+							<div class="header_navigation_footer">
+								<div class="header_navigation_footer_banner">
+									<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
+									<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
 								</div>
 
-								<ul class="header_bottom_navigation_footer_networks">
-									<li class="header_bottom_navigation_footer_network">
+								<ul class="header_navigation_footer_networks">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
 										</a>
 									</li>
-									<li class="header_bottom_navigation_footer_network">
+									<li class="header_navigation_footer_network">
 										<a href="#">
-											<img class="header_bottom_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
-											<img class="header_bottom_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
+											<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
 										</a>
 									</li>
+									<li class="header_navigation_footer_network">
+										<a href="#">
+											<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
+											<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
+										</a>
+									</li><li class="header_navigation_footer_network">
+									<a href="#">
+										<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
+										<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
+									</a>
+								</li>
+
 								</ul>
+							</div>
+
+							<div class="footer_phone">
+								<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
+								<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
 							</div>
 						</div>
 
-						<div class="header_bottom_navigation_info">
-							<p class="header_bottom_navigation_info_title">Вы диктор?</p>
-							<p class="header_bottom_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
+						<div class="header_navigation_info">
+							<p class="header_navigation_info_title">Вы диктор или ведущий?</p>
+							<p class="header_navigation_info_text">Заполните анкету, чтобы попасть в рейтинг</p>
 
-							<button class="header_bottom_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
+							<button class="header_navigation_info_button" onclick="openMenuForm()">Заполнить анкету</button>
 
-							<img class="header_bottom_navigation_info_image" src="./img/logo_info.svg" alt="">
+							<img class="header_navigation_info_image" src="./img/logo_info.svg" alt="">
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="header_bottom_buttons_58f7bdc3">
-				<button class="header_bottom_buttons_button_58f7bdc3" onclick="openForm()">Быстрый заказ</button>
+			<div class="header_right_block_58f7bdc3">
+				<div class="header_right_block_chapters_58f7bdc3">
+					<div class="header_right_block_chapter_58f7bdc3">
+						<button class="header_right_block_chapter_button_58f7bdc3">
+							<img class="header_right_block_chapter_button_icon_hover_58f7bdc3" src="./img/header_phone_hover.svg" alt="" >
+							<img class="header_right_block_chapter_button_icon_58f7bdc3" src="./img/header_phone.svg" alt="" >
+						</button>
 
-				<div class="header_bottom_button_58f7bdc3">
-					<a class="header_bottom_button_phone_58f7bdc3" href="#">8 800 200-45-51</a>
-					<button class="header_bottom_buttons_bell_58f7bdc3">Заказать звонок</button>
+						<div class="header_right_block_chapter_block">
+							<a class="header_right_block_phone_number" href="tel:">8 800 200-45-51</a>
+							<button class="header_right_block_phone_button" onclick="openForm()">Заказать звонок</button>
+						</div>
+					</div>
+
+					<div class="header_right_block_chapter_58f7bdc3">
+						<button class="header_right_block_chapter_button_58f7bdc3">
+							<img class="header_right_block_chapter_button_icon_hover_58f7bdc3" src="./img/header_networks_hover.svg" alt="" >
+							<img class="header_right_block_chapter_button_icon_58f7bdc3" src="./img/header_networks.svg" alt="" >
+						</button>
+
+						<ul class="header_right_block_chapter_block header_right_block_networks">
+							<li class="header_right_block_network">
+								<img class="header_right_block_network_icon header_right_block_network_icon_hover" src="./img/telegram_hover.svg" alt="" >
+								<img class="header_right_block_network_icon" src="./img/telegram.svg" alt="" >
+							</li>
+							<li class="header_right_block_network">
+
+								<img class="header_right_block_network_icon" src="./img/max.svg" alt="" >
+							</li>
+							<li class="header_right_block_network">
+								<img class="header_right_block_network_icon header_right_block_network_icon_hover" src="./img/whatsapp_hover.svg" alt="" >
+								<img class="header_right_block_network_icon" src="./img/whatsapp.svg" alt="" >
+							</li>
+						</ul>
+					</div>
+
+					<div class="header_right_block_chapter_58f7bdc3">
+						<button class="header_right_block_chapter_button_58f7bdc3">
+							<img class="header_right_block_chapter_button_icon_hover_58f7bdc3" src="./img/header_like_hover.svg" alt="" >
+							<img class="header_right_block_chapter_button_icon_58f7bdc3" src="./img/header_like.svg" alt="" >
+						</button>
+					</div>
+				</div>
+
+				<div class="header_right_block_menu_58f7bdc3">
+					<button class="header_right_block_menu_button_58f7bdc3" onclick="menuChangeView()">
+						<div></div>
+						<div></div>
+						<div></div>
+					</button>
+
+					<div class="header_right_block_menu_popup_58f7bdc3" id="headerMenu">
+						<div class="header_right_block_menu_popup_profile_58f7bdc3">
+							<div class="header_right_block_menu_popup_help_58f7bdc3">?</div>
+
+							<img class="header_right_block_menu_popup_profile_icon_hover_58f7bdc3" src="./img/profile_hover.svg" alt="">
+							<img class="header_right_block_menu_popup_profile_icon_58f7bdc3" src="./img/profile.svg" alt="">
+						</div>
+
+						<div class="header_right_block_menu_popup_line_58f7bdc3"></div>
+
+						<ul class="header_right_block_menu_popup_links_58f7bdc3">
+							<li class="header_right_block_menu_popup_link_58f7bdc3">
+								<a class="header_right_block_menu_popup_link_text_58f7bdc3" href="#">Цены</a>
+							</li>
+							<li class="header_right_block_menu_popup_link_58f7bdc3">
+								<a class="header_right_block_menu_popup_link_text_58f7bdc3" href="#">Оплата</a>
+							</li>
+							<li class="header_right_block_menu_popup_link_58f7bdc3">
+								<a class="header_right_block_menu_popup_link_text_58f7bdc3" href="#">FAQ</a>
+							</li>
+							<li class="header_right_block_menu_popup_link_58f7bdc3">
+								<a class="header_right_block_menu_popup_link_text_58f7bdc3" href="#">О студии</a>
+							</li>
+							<li class="header_right_block_menu_popup_link_58f7bdc3">
+								<a class="header_right_block_menu_popup_link_text_58f7bdc3" href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -698,6 +816,15 @@
 				<div></div>
 				<div></div>
 			</button>
+		</div>
+
+		<div class="header_banner_58f7bdc3">
+			<div class="header_banner_content_58f7bdc3">
+				<img class="header_banner_movie_search_logo_58f7bdc3" src="./img/movie_search_logo.svg" alt="Кинопоиск" >
+				<img class="header_banner_x_icon_58f7bdc3" src="./img/x_icon.svg" alt="x" />
+				<img class="header_banner_buy_voice_logo_58f7bdc3" src="./img/buy_voice_logo.svg" alt="КупиГолос">
+				<p class="header_banner_text_58f7bdc3">Студия озвучивания с Кинопоиска</p>
+			</div>
 		</div>
 	</div>
 </header>
