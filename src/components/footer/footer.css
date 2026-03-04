@@ -35,7 +35,6 @@
 	@media screen and (max-width: 810px) {
 		font-size: 20px;
 		line-height: 23px;
-		padding-left: 35px;
 	}
 }
 
@@ -181,7 +180,7 @@
 
 	@media screen and (max-width: 810px) {
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		gap: 20px;
 	}
 }

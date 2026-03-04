@@ -13,7 +13,6 @@ body {
     font-weight: 400;
     position: relative;
     overflow-x: hidden;
-    margin-top: 200px;
 }
 
 a,
@@ -59,4 +58,16 @@ button {
 .background_58f7bdc3_active {
     display: block;
     pointer-events: all;
+}
+
+.content {
+    padding-top: 0 !important;
+}
+
+.s-base {
+    padding-top: 200px;
+
+    @media (max-width: 1000px) {
+        padding-top: 100px;
+    }
 }

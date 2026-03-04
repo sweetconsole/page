@@ -7,6 +7,11 @@
 	border-bottom: none !important;
 	background-color: transparent !important;
 	box-shadow: none !important;
+
+	@media screen and (max-width: 1280px) {
+		background-color: #C1492E !important;
+		top: 0 !important;
+	}
 }
 
 .header_active_58f7bdc3 {

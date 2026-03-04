@@ -8,7 +8,9 @@
 	@media screen and (max-width: 810px) {
 		flex-direction: column;
 		gap: 35px;
+		margin-top: 110px;
 	}
+
 }
 
 .sidebar_photo_58f7bdc3 {
