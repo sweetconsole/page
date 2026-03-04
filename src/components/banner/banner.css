@@ -8,18 +8,18 @@
 }
 
 .top_banner_container_58f7bdc3 {
-	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 10px;
 	width: 100%;
 	background-color: black;
 	border-radius: 25px;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .top_banner_content_58f7bdc3 {
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translateX(-50%);
 	width: 670px;
 	display: flex;
 	gap: 22px;
