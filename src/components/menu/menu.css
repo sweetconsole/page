@@ -1,4 +1,3 @@
-
 .menu_58f7bdc3 {
 	width: 100vw;
 	height: 100vh;
@@ -116,6 +115,7 @@
 	font-weight: 500;
 	color: #3b4173;
 	margin-bottom: 9px;
+	display: list-item;
 }
 
 .menu_list_chapter_content_58f7bdc3 {
@@ -133,7 +133,13 @@
 	font-size: 13px;
 	line-height: 15px;
 	color: #3b4173;
+	display: list-item;
 	margin-bottom: 7px;
+}
+
+.menu_list_subchapter_58f7bdc3_link {
+	display: block;
+	text-decoration: underline;
 }
 
 .menu_list_subchapter_content_58f7bdc3 {
