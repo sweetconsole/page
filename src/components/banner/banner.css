@@ -1,72 +1,44 @@
+.top_banner_58f7bdc3 {
+	height: 100px;
+	width: 100%;
 
-
-.banner_58f7bdc3 {
-
-	background-color: #C1492E;
-	margin-bottom: 100px;
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
 }
 
-.banner_container_58f7bdc3 {
-	height: 256px;
-	display: flex;
-	justify-content: center;
+.top_banner_container_58f7bdc3 {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	border-radius: 25px;
 	position: relative;
-	flex-direction: column;
-
-	@media screen and (max-width: 810px) {
-		height: auto;
-		gap: 40px;
-		align-items: center;
-		padding-top: 20px;
-		padding-bottom: 0;
-	}
 }
 
-.banner_content_58f7bdc3 {
-	max-width: 800px;
-}
-
-.banner_text_58f7bdc3 {
-	color: white;
-	font-size: 42px;
-	font-weight: 700;
-	margin-bottom: 25px;
-	text-transform: uppercase;
-
-	@media screen and (max-width: 810px) {
-		font-size: 20px;
-		text-align: center;
-		margin-bottom: 30px;
-	}
-}
-
-.banner_button_58f7bdc3 {
-	@media screen and (max-width: 810px) {
-		width: 100%;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-}
-
-.banner_icon_58f7bdc3 {
-	width: 387px;
-	height: 80px;
-
-	@media screen and (max-width: 810px) {
-		width: 100%;
-		height: auto;
-	}
-}
-
-.banner_image_58f7bdc3 {
+.top_banner_content_58f7bdc3 {
 	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 670px;
+	display: flex;
+	gap: 22px;
+	align-items: center;
+	transition: all .2s ease-in-out;
+}
 
-	@media screen and (max-width: 810px) {
-		position: static;
-		bottom: 0;
-		transform: translateY(0);
-	}
+.top_banner_movie_search_logo_58f7bdc3 {
+
+}
+
+.top_banner_x_icon_58f7bdc3 {
+
+}
+
+.top_banner_buy_voice_logo_58f7bdc3 {
+
+}
+
+.top_banner_text_58f7bdc3 {
+	color: white;
 }
