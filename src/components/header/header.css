@@ -810,3 +810,54 @@
 	color: #3B4173;
 	text-decoration-color: #3b4173;
 }
+
+
+/* BANNER */
+.fixed .header_banner_58f7bdc3 {
+	opacity: 0;
+	bottom: 0;
+}
+
+.header_banner_58f7bdc3 {
+	height: 96px;
+	width: 100%;
+	background-color: black;
+	border-radius: 0 0 25px 25px;
+	position: absolute;
+	bottom: -60px;
+	z-index: 0;
+	pointer-events: none;
+	transition: all .2s ease-in-out;
+
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
+}
+
+.header_banner_content_58f7bdc3 {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 670px;
+	display: flex;
+	gap: 22px;
+	align-items: center;
+	transition: all .2s ease-in-out;
+}
+
+.header_banner_movie_search_logo_58f7bdc3 {
+
+}
+
+.header_banner_x_icon_58f7bdc3 {
+
+}
+
+.header_banner_buy_voice_logo_58f7bdc3 {
+
+}
+
+.header_banner_text_58f7bdc3 {
+	color: white;
+}
