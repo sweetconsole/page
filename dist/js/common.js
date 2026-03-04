@@ -267,13 +267,16 @@ function submitForm() {
 new CalendarManager("form");
 
 const headerMenu = document.getElementById("headerMenu");
+const headerMenuButton = document.getElementById("header_right_block_menu_button_58f7bdc3");
 let headerMenuView = false
 
 function menuChangeView() {
 	if (headerMenuView) {
 		headerMenu.classList.remove("header_right_block_menu_popup_58f7bdc3_active");
+		headerMenuButton.classList.remove("header_right_block_menu_button_58f7bdc3_active");
 	} else {
 		headerMenu.classList.add("header_right_block_menu_popup_58f7bdc3_active");
+		headerMenuButton.classList.add("header_right_block_menu_button_58f7bdc3_active");
 	}
 
 	headerMenuView = !headerMenuView
