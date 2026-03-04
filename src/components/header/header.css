@@ -192,7 +192,6 @@
 
 .header_navigation_link_chapter_active .header_navigation_links_chapter_list {
 	opacity: 1;
-	pointer-events: auto;
 }
 
 .header_navigation_link_chapter_active .header_navigation_link_chapter_title {
