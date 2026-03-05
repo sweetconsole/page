@@ -548,15 +548,19 @@ Array.from(artist_list).forEach((artist, key) => {
 
 	new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
-		loop: true,
 		spaceBetween: 10,
 		slidesPerView: 2,
+		freeMode: true,
 		breakpoints: {
 			810: {
-				spaceBetween: 12,
-				slidesPerView: 4,
+				slidesPerView: 3,
+				freeMode: false,
 			}
-		}
+		},
+		navigation: {
+			nextEl: `.card_gallery_button_next_${key}_58f7bdc3`,
+			prevEl: `.card_gallery_button_prev_${key}_58f7bdc3`,
+		},
 	});
 
 	new CalendarManager(key);
