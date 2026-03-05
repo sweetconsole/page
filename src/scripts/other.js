@@ -191,6 +191,7 @@ Array.from(artist_list).forEach((artist, key) => {
 			810: {
 				slidesPerView: 3,
 				freeMode: false,
+				allowTouchMove: false,
 			}
 		},
 		navigation: {
