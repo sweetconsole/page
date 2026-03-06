@@ -203,49 +203,28 @@
 	<div class="form_input_date_58f7bdc3">
 		<input class="form_input_58f7bdc3" id="open-calendar-form" placeholder="День события" type="text" name="date" readonly>
 
-		<div class="header_navigation_footer">
-	<div class="header_navigation_footer_banner">
-		<img class="header_navigation_footer_banner_icon" src="./img/movie_search.svg" alt="">
-		<p class="header_navigation_footer_banner_text">КупиГолос - студия озвучивания с Кинопоиска</p>
+		<div class="calendar" id="calendar-form">
+	<div class="calendar-header">
+		<button class="nav-btn" id="prev-month-form" title="Предыдущий месяц">
+			<img src="./img/arrow_left.svg" alt="<">
+		</button>
+
+		<div class="month-year-selector">
+			<select class="month-select" id="month-select-form"></select>
+			<select class="year-select" id="year-select-form"></select>
+		</div>
+
+		<button class="nav-btn" id="next-month-form" title="Следующий месяц">
+			<img src="./img/arrow_right.svg" alt=">">
+		</button>
 	</div>
 
-	<ul class="header_navigation_footer_networks">
-		<li class="header_navigation_footer_network">
-			<a href="#">
-				<img class="header_navigation_footer_network_hover" src="./img/vk_red_hover.svg" alt="">
-				<img class="header_navigation_footer_network_icon" src="./img/vk_red.svg" alt="">
-			</a>
-		</li>
-		<li class="header_navigation_footer_network">
-			<a href="#">
-				<img class="header_navigation_footer_network_hover" src="./img/youtube_red_hover.svg" alt="">
-				<img class="header_navigation_footer_network_icon" src="./img/youtube_red.svg" alt="">
-			</a>
-		</li>
-		<li class="header_navigation_footer_network">
-			<a href="#">
-				<img class="header_navigation_footer_network_hover" src="./img/telegram_red_hover.svg" alt="">
-				<img class="header_navigation_footer_network_icon" src="./img/telegram_red.svg" alt="">
-			</a>
-		</li>
-		<li class="header_navigation_footer_network">
-			<a href="#">
-				<img class="header_navigation_footer_network_hover" src="./img/whatsapp_red_hover.svg" alt="">
-				<img class="header_navigation_footer_network_icon" src="./img/whatsapp_red.svg" alt="">
-			</a>
-		</li><li class="header_navigation_footer_network">
-		<a href="#">
-			<img class="header_navigation_footer_network_hover" src="./img/max_red_hover.svg" alt="">
-			<img class="header_navigation_footer_network_icon" src="./img/max_red.svg" alt="">
-		</a>
-	</li>
+	<div class="weekdays">
+		<div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div>
+		<div>Пт</div><div>Сб</div><div>Вс</div>
+	</div>
 
-	</ul>
-</div>
-
-<div class="footer_phone">
-	<a class="footer_phone_number" href="tel:">8 800 200-45-51</a>
-	<button class="footer_phone_button" onclick="openForm()">Заказать звонок</button>
+	<div class="days" id="calendar-days-form"></div>
 </div>
 	</div>
 
@@ -1554,7 +1533,7 @@
 							</div>
 
 							<div class="swiper gallery_58f7bdc3 gallery_0_58f7bdc3">
-								<ul class="swiper-wrapper">
+								<ul class="swiper-wrapper gallery_wrapper_58f7bdc3">
 									<li class="swiper-slide gallery_item_58f7bdc3" onclick="openVideoPopup('https://rutube.ru/play/embed/396c102de740d5cfc6ebc42b2616667d')">
 										<img class="gallery_image_58f7bdc3" src="./img/gallery.png" alt="">
 
@@ -1706,7 +1685,7 @@
 							</div>
 
 							<div class="swiper gallery_58f7bdc3 gallery_1_58f7bdc3">
-								<ul class="swiper-wrapper">
+								<ul class="swiper-wrapper gallery_wrapper_58f7bdc3">
 									<li class="swiper-slide gallery_item_58f7bdc3" onclick="openVideoPopup('https://rutube.ru/play/embed/396c102de740d5cfc6ebc42b2616667d')">
 										<img class="gallery_image_58f7bdc3" src="./img/gallery.png" alt="">
 

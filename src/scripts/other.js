@@ -185,7 +185,7 @@ Array.from(artist_list).forEach((artist, key) => {
 	new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
 		spaceBetween: 10,
-		slidesPerView: 2,
+		slidesPerView: "auto",
 		freeMode: true,
 		breakpoints: {
 			810: {

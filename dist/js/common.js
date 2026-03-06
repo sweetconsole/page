@@ -555,7 +555,7 @@ Array.from(artist_list).forEach((artist, key) => {
 	new Swiper(`.gallery_${key}_58f7bdc3`, {
 		direction: 'horizontal',
 		spaceBetween: 10,
-		slidesPerView: 2,
+		slidesPerView: "auto",
 		freeMode: true,
 		breakpoints: {
 			810: {
@@ -687,11 +687,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		otherArtist: createSwiper(".other_artists_58f7bdc3", {
 			slidesPerView: 1,
 			spaceBetween: 20,
-			allowTouchMove: false,
 			navigation: {
 				nextEl: '.info_swiper_button_next_artist_58f7bdc3',
 				prevEl: '.info_swiper_button_prev_artist_photo_58f7bdc3',
-			}
+			},
 		}, 'otherArtist')
 	};
 

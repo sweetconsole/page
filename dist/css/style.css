@@ -27416,6 +27416,7 @@ button {
 	border-radius: 55px;
 
 	@media screen and (max-width: 810px) {
+		top: 50%;
 		max-width: 320px;
 		padding: 40px 30px;
 		border-radius: 35px;
@@ -29431,9 +29432,10 @@ details[open] > summary::after {
 
 	@media screen and (max-width: 810px) {
 		width: 320px;
-		height: 330px;
+		height: auto;
 		padding: 20px 0 20px;
 		border-radius: 20px;
+		overflow: hidden;
 	}
 }
 
@@ -29624,8 +29626,8 @@ details[open] > summary::after {
 	position: relative;
 
 	@media screen and (max-width: 810px) {
-		width: 75px;
-		height: 75px;
+		width: 65px;
+		height: 65px;
 	}
 }
 
@@ -29683,10 +29685,10 @@ details[open] > summary::after {
 	border-radius: 100%;
 
 	@media screen and (max-width: 810px) {
-		width: 69px;
-		height: 69px;
-		top: 3px;
-		left: 3px;
+		width: 57px;
+		height: 57px;
+		top: 4px;
+		left: 4px;
 	}
 }
 
@@ -29718,7 +29720,7 @@ details[open] > summary::after {
 	margin-bottom: 9px;
 
 	@media screen and (max-width: 810px) {
-		margin-bottom: 5px;
+		margin-bottom: 4px;
 		gap: 5px;
 	}
 }
@@ -29731,7 +29733,7 @@ details[open] > summary::after {
 
 	@media screen and (max-width: 810px) {
 		font-size: 10px;
-		line-height: 16px;
+		line-height: 12px;
 		text-align: center;
 		text-decoration: underline;
 	}
@@ -29744,8 +29746,8 @@ details[open] > summary::after {
 
 .artist_name_icon_58f7bdc3 {
 	@media screen and (max-width: 810px) {
-		width: 18px;
-		height: 16px;
+		width: 13px;
+		height: 12px;
 	}
 }
 
@@ -29757,6 +29759,7 @@ details[open] > summary::after {
 
 	@media screen and (max-width: 810px) {
 		font-size: 10px;
+		margin-bottom: 7px;
 	}
 }
 
@@ -29831,7 +29834,14 @@ details[open] > summary::after {
 	position: relative;
 
 	@media screen and (max-width: 810px) {
-		margin-bottom: 17px;
+		margin-bottom: 15px;
+		overflow: visible;
+	}
+}
+
+.gallery_wrapper_58f7bdc3 {
+	@media screen and (max-width: 810px) {
+
 	}
 }
 
@@ -29888,8 +29898,8 @@ details[open] > summary::after {
 	height: 180px;
 
 	@media screen and (max-width: 810px) {
-		width: 155px !important;
-		height: 105px;
+		width: 222px !important;
+		height: 155px;
 	}
 }
 
