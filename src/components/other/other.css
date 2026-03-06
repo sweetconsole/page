@@ -115,13 +115,13 @@
 
 .card_58f7bdc3 {
 	width: 900px;
-	height: 430px;
+	height: 445px;
 	background-color: #F4F4F4;
 	border-radius: 55px;
 	position: relative;
 	padding-left: 35px;
 	padding-right: 35px;
-	padding-top: 36px;
+	padding-top: 50px;
 
 	@media screen and (max-width: 810px) {
 		width: 100%;
