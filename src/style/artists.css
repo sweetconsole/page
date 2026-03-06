@@ -31,7 +31,7 @@
 	flex-direction: column;
 	gap: 30px;
 	margin-bottom: 50px;
-
+	width: 100%;
 }
 
 .s-base__menu {
