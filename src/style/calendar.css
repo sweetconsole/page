@@ -70,7 +70,7 @@
 
 .month-select,
 .year-select {
-	padding: 10px 12px;
+	padding: 7px 0 7px 10px;
 	border: none;
 	border-radius: 7px;
 	background: white;
