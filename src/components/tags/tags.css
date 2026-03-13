@@ -1,0 +1,183 @@
+
+.artists_tags_58f7bdc3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 121px 170px;
+	gap: 35px;
+	grid-template-areas:
+		"types services"
+		"types categories"
+}
+
+.artists_tags_block {
+	border-radius: 15px;
+}
+
+.artists_tags_title {
+	font-size: 20px;
+	line-height: 135%;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+
+.artists_types_58f7bdc3 {
+	grid-area: types;
+	background-color: #C1492E;
+	position: relative;
+	padding: 40px 80px 40px 40px;
+}
+
+.artists_types_title_58f7bdc3 {
+	color: white;
+}
+
+.artists_types_logo_58f7bdc3 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	opacity: 0.25;
+	z-index: 1;
+}
+
+.artists_types_list_58f7bdc3 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	position: relative;
+	z-index: 2;
+}
+
+.artists_type_58f7bdc3 {
+	border: 1px solid white;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.artists_type_58f7bdc3 path {
+	transition: all .2s ease-in-out;
+}
+
+.artists_type_58f7bdc3:hover {
+	background-color: white;
+}
+
+.artists_type_58f7bdc3:hover .artists_type_title_58f7bdc3 {
+	color: #C1492E;
+}
+
+.artists_type_58f7bdc3:hover path {
+	fill: #C1492E;
+}
+
+.artists_type_title_58f7bdc3 {
+	font-size: 15px;
+	line-height: 18px;
+	color: white;
+	transition: all .2s ease-in-out;
+}
+
+/* SERVICES */
+.artists_services_58f7bdc3 {
+	background-color: #BCBFD7;
+	padding: 20px 40px;
+}
+
+.artists_services_title_58f7bdc3 {
+	color: #3B4173;
+}
+
+.artists_services_list_58f7bdc3 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.artists_service_58f7bdc3 {
+	border: 1px solid #3B4173;
+	border-radius: 7px;
+	padding: 6px 16px;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	gap: 8px;
+	transition: all .2s ease-in-out;
+}
+
+.artists_service_58f7bdc3 path {
+	transition: all .2s ease-in-out;
+}
+
+.artists_service_58f7bdc3:hover {
+	background-color: #3B4173;
+}
+
+.artists_service_58f7bdc3:hover path {
+	fill: #BCBFD7;
+}
+
+.artists_service_58f7bdc3:hover .artists_service_title_58f7bdc3 {
+	color: #BCBFD7;
+}
+
+.artists_service_title_58f7bdc3 {
+	color: #3B4173;
+	font-size: 15px;
+	line-height: 18px;
+	transition: all .2s ease-in-out;
+}
+
+/* CATEGORIES */
+.artists_categories_58f7bdc3 {
+	background-color: #BCBFD7;
+	padding: 20px 40px;
+}
+
+.artists_categories_title_58f7bdc3 {
+	color: #3B4173;
+}
+
+.artists_categories_list_58f7bdc3 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.artists_category_58f7bdc3 {
+	border: 1px solid #3B4173;
+	border-radius: 7px;
+	padding: 6px 16px;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	gap: 8px;
+	transition: all .2s ease-in-out;
+}
+
+.artists_category_58f7bdc3 path {
+	transition: all .2s ease-in-out;
+}
+
+.artists_category_58f7bdc3:hover {
+	background-color: #3B4173;
+}
+
+.artists_category_58f7bdc3:hover path {
+	fill: #BCBFD7;
+}
+
+.artists_category_58f7bdc3:hover .artists_category_title_58f7bdc3 {
+	color: #BCBFD7;
+}
+
+.artists_category_title_58f7bdc3 {
+	color: #3B4173;
+	font-size: 15px;
+	line-height: 18px;
+	transition: all .2s ease-in-out;
+}
