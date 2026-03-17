@@ -16,7 +16,7 @@
 }
 
 .header_58f7bdc3:has(.header_menu_chapter:hover) .header_banner_58f7bdc3 {
-	opacity: 0;
+	background-color: white;
 }
 
 .header_active_58f7bdc3 {
@@ -143,8 +143,8 @@
 
 .header_navigation_block {
 	width: 100%;
-	max-width: 880px;
-	top: 115px;
+	max-width: 1270px;
+	top: 90px;
 	left: 50%;
 	transform: translateX(-50%);
 	position: absolute;
@@ -153,8 +153,13 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	opacity: 0;
+	z-index: -1;
 	pointer-events: none;
-	transition: all .3s ease-in-out;
+	transition: all .2s ease-in-out;
+	background-color: white;
+	padding-top: 30px;
+	box-shadow: 2px 4px 75px 0 rgba(230, 230, 230, 0.33);
+	border-radius: 55px;
 }
 
 .header_navigation_block::before {
@@ -170,8 +175,6 @@
 .header_navigation_content {
 	border-radius: 37px;
 	padding: 28px 40px 40px;
-	background-color: white;
-	box-shadow: 2px 4px 75px 0 rgba(230, 230, 230, 0.33);
 }
 
 .header_navigation_links {
@@ -345,14 +348,14 @@
 
 .header_navigation_info {
 	max-width: 260px;
-	height: 340px;
+	height: 360px;
 	background-color: #C1492E;
 	border-radius: 55px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	position: relative;
-	padding: 45px 33px 33px;
+	padding: 30px;
 }
 
 .header_navigation_info_title {

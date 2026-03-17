@@ -184,6 +184,10 @@ details[open] > summary::after {
 	text-decoration: underline;
 }
 
+.menu_list_subchapter_58f7bdc3_accent_link {
+	text-decoration: un;
+}
+
 .menu_list_subchapter_content_58f7bdc3 {
 	display: flex;
 	flex-direction: column;
