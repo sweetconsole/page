@@ -13,6 +13,7 @@ body {
     font-weight: 400;
     position: relative;
     overflow-x: hidden;
+    background-color: white !important;
 }
 
 a,
@@ -22,7 +23,7 @@ button {
 
 .container_58f7bdc3 {
     width: 100%;
-    max-width: 1270px;
+    max-width: 1268px;
     margin: 0 auto;
 
     @media screen and (max-width: 810px) {
