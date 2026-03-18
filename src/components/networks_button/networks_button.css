@@ -1,0 +1,73 @@
+.networks_button_container_58f7bdc3 {
+	height: 180px;
+	z-index: 110;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	bottom: 50px;
+	right: 50px;
+
+	@media (max-width: 1400px) {
+		bottom: 35px;
+		right: 35px;
+	}
+}
+
+.networks_button_container_58f7bdc3_active .networks_button_icon_58f7bdc3 {
+	width: 32px;
+	height: 32px;
+	margin-top: 2px;
+	margin-left: 2px;
+}
+
+.networks_button_58f7bdc3 {
+	width: 60px;
+	height: 60px;
+	background-color: #C1492E;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid white;
+	display: flex;
+	position: relative;
+	z-index: 10;
+}
+
+.networks_button_icon_58f7bdc3 {
+	width: 24px;
+	height: 24px;
+	transition: all .2s ease-in-out;
+}
+
+.networks_button_container_58f7bdc3_active .networks_network_58f7bdc3 {
+	opacity: 1;
+}
+
+.networks_network_58f7bdc3 {
+	width: 40px;
+	height: 40px;
+	z-index: 5;
+	opacity: 0;
+	position: relative;
+}
+
+.networks_network_58f7bdc3:hover .networks_button_icon_hover_58f7bdc4 {
+	opacity: 1;
+}
+
+.networks_button_icon_hover_58f7bdc4 {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.networks_button_icon_58f7bdc4 {
+	width: 100%;
+	height: 100%;
+}

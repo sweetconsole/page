@@ -368,6 +368,15 @@ function submitMenuForm() {
 
 	closeForm()
 }
+
+const networksContainer = document.getElementById("networks_button_container_58f7bdc3")
+
+let isViewNetworks = false
+
+function viewNetworks() {
+	networksContainer.classList.toggle("networks_button_container_58f7bdc3_active");
+	isViewNetworks = !isViewNetworks;
+}
 const artist_list = document.getElementById('other_list_artist_58f7bdc3').getElementsByClassName('card_58f7bdc3');
 
 let circles = [];
