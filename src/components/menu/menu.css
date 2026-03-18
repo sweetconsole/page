@@ -149,6 +149,7 @@ details[open] > summary::after {
 	display: flex;
 	flex-direction: column;
 	gap: 7px;
+	margin-top: 7px;
 }
 
 .menu_list_chapter_content_58f7bdc3 a {
@@ -184,7 +185,6 @@ details[open] > summary::after {
 	position: relative;
 }
 
-
 .menu_list_subchapter_58f7bdc3_link {
 	display: block;
 	text-decoration: underline;
@@ -198,6 +198,7 @@ details[open] > summary::after {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	margin-top: 5px;
 }
 
 .menu_list_links_link_58f7bdc3 {
