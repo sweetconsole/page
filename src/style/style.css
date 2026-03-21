@@ -33,6 +33,8 @@ button {
 
 .content_container_58f7bdc3 {
     display: grid;
+    position: relative;
+    align-items: flex-start;
     justify-content: space-between;
     grid-template-columns: 330px 837px;
     

@@ -141,12 +141,12 @@
 .info_video_58f7bdc3 {
 	width: 100%;
 	height: 470px;
-	border-radius: 71px;
+	border-radius: 22px;
 
 	@media screen and (max-width: 810px) {
 		width: 100%;
 		height: 180px;
-		border-radius: 24px;
+		border-radius: 14px;
 	}
 }
 
@@ -263,6 +263,14 @@
 
 .info_comments_list_58f7bdc3 {
 
+}
+
+.comment-form-container {
+	display: none;
+}
+
+.comment-form-container_active {
+	display: block;
 }
 
 /*.info_comment_answer_58f7bdc3 {*/
@@ -470,7 +478,6 @@
 
 /* MOVIES */
 .info_list_movies_58f7bdc3 {
-	margin-bottom: 75px;
 	cursor: grab;
 }
 

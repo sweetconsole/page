@@ -1,5 +1,10 @@
 
 .sidebar_58f7bdc3 {
+	position: sticky;
+	height: auto;
+	top: 100px;
+	left: 0;
+
 	@media screen and (max-width: 1280px) {
 		display: flex;
 		gap: 25px;

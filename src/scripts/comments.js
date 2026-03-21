@@ -32,15 +32,7 @@ const comments_list = new Swiper('.info_comments_list_58f7bdc3', {
 });
 
 function showMoreComments() {
-	if (commentsCount > comments_list.params.grid.rows) {
-		console.log(commentsCount, comments_list.params.grid.rows);
-		comments_list.params.grid.rows += 5;
-		comments_list.update();
+	const form = document.getElementById("comment-form-container")
 
-		if (commentsCount <= comments_list.params.grid.rows) {
-			buttonComments.classList.add("info_comment_add_disabled_58f7bdc3");
-		}
-	} else {
-		buttonComments.classList.add("info_comment_add_disabled_58f7bdc3");
-	}
+	form.classList.toggle('comment-form-container_active');
 }

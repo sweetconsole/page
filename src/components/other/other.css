@@ -5,6 +5,7 @@
 	align-items: center;
 	gap: 50px;
 	margin-bottom: 50px;
+	margin-top: 75px;
 
 	@media screen and (max-width: 810px) {
 		margin-bottom: 75px;
@@ -93,8 +94,7 @@
 }
 
 .other_artists_58f7bdc3 {
-	width: 100%;
-	max-width: 900px;
+	padding-top: 0;
 }
 
 .other_artist_58f7bdc3 {
@@ -112,6 +112,15 @@
 		border-radius: 15px;
 	}
 }
+
+.player__icon-play {
+	background-image: url("https://kupigolos.ru/img/play.png") !important;
+}
+
+.player__icon-pause {
+	background-image: url("https://kupigolos.ru/img/pause.png") !important;
+}
+
 
 .card_58f7bdc3 {
 	width: 900px;
