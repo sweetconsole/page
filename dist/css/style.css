@@ -27767,7 +27767,8 @@ button {
 
 .header_menu {
 	height: 100%;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
 
 	@media screen and (max-width: 1280px) {
@@ -27787,12 +27788,12 @@ button {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	padding: 0 25px;
+	padding: 0 30px;
 }
 
 
 .header_menu_ge_link_58f7bdc3 {
-	padding: 0 25px;
+	padding: 0 30px;
 	font-size: 16px;
 	line-height: 19px;
 	color: white;
@@ -28632,7 +28633,7 @@ button {
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
-	gap: 24px;
+	gap: 22px;
 	align-items: center;
 	transition: all .2s ease-in-out;
 }
@@ -28646,101 +28647,13 @@ button {
 }
 
 .header_banner_buy_voice_logo_58f7bdc3 {
-	width: 40px;
-	height: 18px;
+	width: 60px;
+	height: 27px;
 }
 
 .header_banner_text_58f7bdc3 {
 	color: white;
 	font-size: 13px;
-}
-
-.intro_58f7bdc3 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 50px;
-	margin-top: 185px;
-
-	@media screen and (max-width: 1280px) {
-		display: none;
-	}
-}
-
-.intro_navigation_58f7bdc3 {
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	margin-bottom: 40px;
-}
-
-.intro_navigation_link_58f7bdc3 {
-	font-size: 20px;
-	line-height: 23px;
-	color: #3B4173;
-	transition: all .2s ease-in-out;
-}
-
-.intro_navigation_link_58f7bdc3:hover {
-	color: #C1492E;
-}
-
-.intro_title_58f7bdc3 {
-	font-size: 70px;
-	line-height: 82px;
-	font-weight: 700;
-	color: #3B4173;
-	margin-bottom: 17px;
-}
-
-.intro_tags_58f7bdc3 {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	list-style: none;
-}
-
-.intro_tag_check_58f7bdc3 {
-	width: 42px;
-	height: 42px;
-}
-
-.intro_tag_check_icon_58f7bdc3 {
-	width: 100%;
-	height: 100%;
-}
-
-.intro_tag_58f7bdc3 {
-	padding: 10px;
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	color: #C1492E;
-	border-radius: 100px;
-	cursor: default;
-	border: 1px solid #C1492E;
-}
-
-.intro_tag_58f7bdc3:hover {
-	background-color: #C1492E;
-	color: white;
-}
-
-.intro_tag_58f7bdc3:hover p {
-	color: white;
-}
-
-.intro_tag_icon_58f7bdc3 {
-	width: 21px;
-	height: 21px;
-	object-fit: contain;
-}
-
-.intro_tag_title_58f7bdc3 {
-	font-size: 15px;
-	line-height: 18px;
-	font-weight: 700;
-	color: #C1492E;
 }
 
 .info_58f7bdc3 {
@@ -29283,78 +29196,93 @@ button {
 		font-size: 13px;
 	}
 }
-.networks_button_container_58f7bdc3 {
-	height: 180px;
-	z-index: 110;
-	position: fixed;
+
+.intro_58f7bdc3 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
-	bottom: 50px;
-	right: 50px;
+	margin-bottom: 50px;
+	margin-top: 185px;
 
-	@media (max-width: 1400px) {
-		bottom: 35px;
-		right: 35px;
+	@media screen and (max-width: 1280px) {
+		display: none;
 	}
 }
 
-.networks_button_container_58f7bdc3_active .networks_button_icon_58f7bdc3 {
-	width: 32px;
-	height: 32px;
-	margin-top: 2px;
-	margin-left: 2px;
-}
-
-.networks_button_58f7bdc3 {
-	width: 60px;
-	height: 60px;
-	background-color: #C1492E;
-	border-radius: 50%;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid white;
+.intro_navigation_58f7bdc3 {
 	display: flex;
-	position: relative;
-	z-index: 10;
+	gap: 10px;
+	align-items: center;
+	margin-bottom: 40px;
 }
 
-.networks_button_icon_58f7bdc3 {
-	width: 24px;
-	height: 24px;
+.intro_navigation_link_58f7bdc3 {
+	font-size: 20px;
+	line-height: 23px;
+	color: #3B4173;
 	transition: all .2s ease-in-out;
 }
 
-.networks_button_container_58f7bdc3_active .networks_network_58f7bdc3 {
-	opacity: 1;
+.intro_navigation_link_58f7bdc3:hover {
+	color: #C1492E;
 }
 
-.networks_network_58f7bdc3 {
-	width: 40px;
-	height: 40px;
-	z-index: 5;
-	opacity: 0;
-	position: relative;
+.intro_title_58f7bdc3 {
+	font-size: 70px;
+	line-height: 82px;
+	font-weight: 700;
+	color: #3B4173;
+	margin-bottom: 17px;
 }
 
-.networks_network_58f7bdc3:hover .networks_button_icon_hover_58f7bdc4 {
-	opacity: 1;
+.intro_tags_58f7bdc3 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	list-style: none;
 }
 
-.networks_button_icon_hover_58f7bdc4 {
+.intro_tag_check_58f7bdc3 {
+	width: 42px;
+	height: 42px;
+}
+
+.intro_tag_check_icon_58f7bdc3 {
 	width: 100%;
 	height: 100%;
-	opacity: 0;
-	transition: all .2s ease-in-out;
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 
-.networks_button_icon_58f7bdc4 {
-	width: 100%;
-	height: 100%;
+.intro_tag_58f7bdc3 {
+	padding: 10px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	color: #C1492E;
+	border-radius: 100px;
+	cursor: default;
+	border: 1px solid #C1492E;
+}
+
+.intro_tag_58f7bdc3:hover {
+	background-color: #C1492E;
+	color: white;
+}
+
+.intro_tag_58f7bdc3:hover p {
+	color: white;
+}
+
+.intro_tag_icon_58f7bdc3 {
+	width: 21px;
+	height: 21px;
+	object-fit: contain;
+}
+
+.intro_tag_title_58f7bdc3 {
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 700;
+	color: #C1492E;
 }
 .menu_58f7bdc3 {
 	width: 100vw;
@@ -29695,6 +29623,79 @@ details[open] > summary::after {
 	font-size: 15px;
 	line-height: 18px;
 	color: #3B4173;
+}
+.networks_button_container_58f7bdc3 {
+	height: 180px;
+	z-index: 110;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	bottom: 50px;
+	right: 50px;
+
+	@media (max-width: 1400px) {
+		bottom: 35px;
+		right: 35px;
+	}
+}
+
+.networks_button_container_58f7bdc3_active .networks_button_icon_58f7bdc3 {
+	width: 32px;
+	height: 32px;
+	margin-top: 2px;
+	margin-left: 2px;
+}
+
+.networks_button_58f7bdc3 {
+	width: 60px;
+	height: 60px;
+	background-color: #C1492E;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid white;
+	display: flex;
+	position: relative;
+	z-index: 10;
+}
+
+.networks_button_icon_58f7bdc3 {
+	width: 24px;
+	height: 24px;
+	transition: all .2s ease-in-out;
+}
+
+.networks_button_container_58f7bdc3_active .networks_network_58f7bdc3 {
+	opacity: 1;
+}
+
+.networks_network_58f7bdc3 {
+	width: 40px;
+	height: 40px;
+	z-index: 5;
+	opacity: 0;
+	position: relative;
+}
+
+.networks_network_58f7bdc3:hover .networks_button_icon_hover_58f7bdc4 {
+	opacity: 1;
+}
+
+.networks_button_icon_hover_58f7bdc4 {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.networks_button_icon_58f7bdc4 {
+	width: 100%;
+	height: 100%;
 }
 
 .other_58f7bdc3 {

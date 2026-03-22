@@ -80,7 +80,8 @@
 
 .header_menu {
 	height: 100%;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
 
 	@media screen and (max-width: 1280px) {
@@ -100,12 +101,12 @@
 	height: 100%;
 	display: flex;
 	align-items: center;
-	padding: 0 25px;
+	padding: 0 30px;
 }
 
 
 .header_menu_ge_link_58f7bdc3 {
-	padding: 0 25px;
+	padding: 0 30px;
 	font-size: 16px;
 	line-height: 19px;
 	color: white;
@@ -945,7 +946,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
-	gap: 24px;
+	gap: 22px;
 	align-items: center;
 	transition: all .2s ease-in-out;
 }
@@ -959,8 +960,8 @@
 }
 
 .header_banner_buy_voice_logo_58f7bdc3 {
-	width: 40px;
-	height: 18px;
+	width: 60px;
+	height: 27px;
 }
 
 .header_banner_text_58f7bdc3 {
